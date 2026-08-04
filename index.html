@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BillVexa — India's Next Generation Billing &amp; Inventory Platform</title>
+<meta name="description" content="BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built for Indian retailers, wholesalers, and SMEs. Coming soon." />
+<meta name="keywords" content="BillVexa, GST billing software, POS software India, inventory management, retail billing app, kirana store software, wholesale billing, GST invoice software, small business ERP India" />
+<meta name="author" content="BillVexa" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://billvexa.in/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="BillVexa" />
+<meta property="og:title" content="BillVexa — India's Next Generation Billing &amp; Inventory Platform" />
+<meta property="og:description" content="GST-ready billing, POS, inventory and business management — built specifically for Indian retailers, wholesalers, and SMEs. Launching soon." />
+<meta property="og:url" content="https://billvexa.in/" />
+<meta property="og:image" content="https://billvexa.in/og-image.png" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BillVexa — India's Next Generation Billing &amp; Inventory Platform" />
+<meta name="twitter:description" content="GST-ready billing, POS, inventory and business management — built for Indian retailers, wholesalers, and SMEs." />
+<meta name="twitter:image" content="https://billvexa.in/og-image.png" />
+
+<!-- Favicon (inline data URI — brand monogram, no external asset needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231976D2'/%3E%3Cstop offset='1' stop-color='%2300C853'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3EBV%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts: Poppins (body/display) + Material Symbols (icons) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "BillVexa",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Billing and Inventory Management Software",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built for Indian retailers, wholesalers, and SMEs.",
+  "url": "https://billvexa.in/",
+  "image": "https://billvexa.in/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/PreOrder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BillVexa",
+    "url": "https://billvexa.in/"
+  },
+  "areaServed": "IN",
+  "inLanguage": "en-IN"
+}
+</script>
+
+<style>
+/* ============================================================
+   1. RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+body { margin: 0; }
+img, svg { display: block; max-width: 100%; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, h4, p { margin: 0; }
+
+/* ============================================================
+   2. DESIGN TOKENS — LIGHT (default) THEME
+   ============================================================ */
+:root {
+  /* brand */
+  --primary: #1976D2;
+  --primary-600: #1565C0;
+  --primary-700: #0D47A1;
+  --primary-100: #E3F2FD;
+  --secondary: #00C853;
+  --secondary-700: #00873B;
+  --accent: #FFB300;
+  --accent-700: #C77E00;
+
+  /* surfaces & text */
+  --bg: #F5F7FA;
+  --bg-subtle: #ECF1F7;
+  --bg-elevated: #FFFFFF;
+  --card: #FFFFFF;
+  --card-border: rgba(16, 24, 43, 0.07);
+  --ink: #0F1B2D;
+  --ink-soft: #4C5870;
+  --ink-faint: #7C879B;
+  --border: rgba(16, 24, 43, 0.09);
+  --nav-bg: rgba(255, 255, 255, 0.72);
+  --overlay-sheen: rgba(255, 255, 255, 0.5);
+
+  /* elevation */
+  --shadow-1: 0 1px 2px rgba(16,24,43,.05), 0 2px 6px rgba(16,24,43,.06);
+  --shadow-2: 0 10px 28px -10px rgba(16,24,43,.18);
+  --shadow-3: 0 26px 54px -14px rgba(16,24,43,.28);
+  --glow-primary: 0 0 0 1px rgba(25,118,210,.16), 0 18px 38px -12px rgba(25,118,210,.35);
+
+  /* geometry */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --container: 1224px;
+
+  /* type */
+  --font: 'Poppins', 'Segoe UI', sans-serif;
+  --fs-display: clamp(2.4rem, 1.85rem + 2.6vw, 4.1rem);
+  --fs-h2: clamp(1.7rem, 1.45rem + 1.2vw, 2.65rem);
+  --fs-h3: clamp(1.2rem, 1.08rem + 0.5vw, 1.5rem);
+  --fs-lead: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
+}
+
+[data-theme="dark"] {
+  --bg: #0B1220;
+  --bg-subtle: #0F1A2E;
+  --bg-elevated: #101B30;
+  --card: #131F37;
+  --card-border: rgba(233, 238, 247, 0.08);
+  --ink: #EAEFF8;
+  --ink-soft: #A9B4CB;
+  --ink-faint: #78859E;
+  --border: rgba(233, 238, 247, 0.1);
+  --nav-bg: rgba(11, 18, 32, 0.68);
+  --overlay-sheen: rgba(255, 255, 255, 0.04);
+  --primary-100: rgba(25,118,210,0.16);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.35);
+  --shadow-2: 0 10px 28px -10px rgba(0,0,0,.55);
+  --shadow-3: 0 26px 54px -14px rgba(0,0,0,.65);
+  --glow-primary: 0 0 0 1px rgba(56,150,255,.25), 0 18px 38px -12px rgba(25,118,210,.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1220;
+    --bg-subtle: #0F1A2E;
+    --bg-elevated: #101B30;
+    --card: #131F37;
+    --card-border: rgba(233, 238, 247, 0.08);
+    --ink: #EAEFF8;
+    --ink-soft: #A9B4CB;
+    --ink-faint: #78859E;
+    --border: rgba(233, 238, 247, 0.1);
+    --nav-bg: rgba(11, 18, 32, 0.68);
+    --overlay-sheen: rgba(255, 255, 255, 0.04);
+    --primary-100: rgba(25,118,210,0.16);
+    --shadow-1: 0 1px 2px rgba(0,0,0,.35);
+    --shadow-2: 0 10px 28px -10px rgba(0,0,0,.55);
+    --shadow-3: 0 26px 54px -14px rgba(0,0,0,.65);
+    --glow-primary: 0 0 0 1px rgba(56,150,255,.25), 0 18px 38px -12px rgba(25,118,210,.5);
+  }
+}
+
+/* ============================================================
+   3. GLOBAL ELEMENTS
+   ============================================================ */
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  font-size: 1.25em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -60px;
+  left: 12px;
+  z-index: 999;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 12px; }
+
+.visually-hidden { position: absolute; left: -9999px; }
+.mt-20 { margin-top: 20px; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 48px);
+}
+
+section { position: relative; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-100);
+  padding: 7px 14px 7px 10px;
+  border-radius: 999px;
+}
+[data-theme="dark"] .eyebrow { color: #7FB2F5; }
+.eyebrow .material-symbols-outlined { font-size: 1.05em; }
+
+.section-head {
+  max-width: 680px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+.section-head h2 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  margin-top: 14px;
+  text-wrap: balance;
+}
+.section-head p {
+  margin-top: 14px;
+  font-size: var(--fs-lead);
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head.center .eyebrow { margin-inline: auto; }
+
+/* buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: .98rem;
+  padding: 14px 26px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, background .25s ease, border-color .25s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px) scale(.99); }
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(100deg, var(--primary), var(--primary-600) 55%, var(--secondary-700));
+  box-shadow: var(--glow-primary);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 22px 42px -14px rgba(25,118,210,.45); }
+.btn-ghost {
+  color: var(--ink);
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border);
+}
+.btn-ghost:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+.btn-sm { padding: 10px 18px; font-size: .88rem; }
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,.55);
+  transform: scale(0);
+  animation: rippleAnim .6s ease-out forwards;
+  pointer-events: none;
+}
+.btn-ghost .ripple { background: rgba(25,118,210,.18); }
+@keyframes rippleAnim { to { transform: scale(2.6); opacity: 0; } }
+
+/* reveal-on-scroll */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal-stagger.is-visible > * { transition-delay: calc(var(--i, 0) * 70ms); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   4. NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.nav.scrolled { border-color: var(--border); box-shadow: var(--shadow-1); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
+
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.18rem; letter-spacing: -.02em; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; font-size: .9rem;
+  box-shadow: var(--shadow-1);
+}
+
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { font-size: .93rem; font-weight: 500; color: var(--ink-soft); transition: color .2s ease; position: relative; }
+.nav-links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--primary); transform: scaleX(0); transition: transform .25s ease; }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.icon-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  cursor: pointer; transition: border-color .2s ease, transform .2s ease, color .2s ease;
+}
+.icon-btn:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
+#theme-toggle .icon-dark { display: none; }
+[data-theme="dark"] #theme-toggle .icon-light { display: none; }
+[data-theme="dark"] #theme-toggle .icon-dark { display: inline; }
+
+.nav-burger { display: none; }
+
+.mobile-drawer {
+  position: fixed; inset: 0; z-index: 99;
+  background: var(--bg);
+  padding: 100px 28px 40px;
+  transform: translateY(-100%);
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.mobile-drawer.open { transform: translateY(0); }
+.mobile-drawer a { padding: 16px 4px; font-size: 1.15rem; font-weight: 600; border-bottom: 1px solid var(--border); }
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  padding-top: clamp(140px, 18vw, 190px);
+  padding-bottom: clamp(70px, 10vw, 120px);
+  overflow: hidden;
+}
+.hero-blobs { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+.blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .35; }
+.blob-1 { width: 480px; height: 480px; background: var(--primary); top: -160px; left: -120px; }
+.blob-2 { width: 420px; height: 420px; background: var(--secondary); top: 60px; right: -160px; opacity: .25; }
+.blob-3 { width: 320px; height: 320px; background: var(--accent); bottom: -140px; left: 30%; opacity: .2; }
+[data-theme="dark"] .blob { opacity: .22; }
+
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 6vw, 70px); align-items: center; }
+
+.hero-copy h1 {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  margin-top: 20px;
+}
+.hero-copy h1 .accent-word {
+  background: linear-gradient(100deg, var(--primary), var(--secondary-700) 60%, var(--secondary));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-copy p.lead {
+  margin-top: 22px;
+  font-size: var(--fs-lead);
+  color: var(--ink-soft);
+  line-height: 1.7;
+  max-width: 54ch;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+.hero-trust { display: flex; align-items: center; gap: 18px; margin-top: 34px; flex-wrap: wrap; }
+.trust-avatars { display: flex; }
+.trust-avatars span {
+  width: 34px; height: 34px; border-radius: 50%; margin-left: -10px;
+  border: 2px solid var(--bg); background: linear-gradient(135deg, var(--primary-100), var(--secondary));
+  display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: var(--primary-700);
+}
+.trust-avatars span:first-child { margin-left: 0; }
+.hero-trust small { color: var(--ink-faint); font-size: .85rem; font-weight: 500; }
+
+/* hero mockup stack */
+.hero-visual { position: relative; height: clamp(360px, 42vw, 480px); perspective: 1400px; }
+.stage {
+  position: absolute; inset: 0; transform-style: preserve-3d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(20px, 4vw, 34px);
+}
+.float-card {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+  padding: 18px;
+  will-change: transform;
+}
+.float-card .fc-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.float-card .fc-title { font-weight: 700; font-size: .82rem; color: var(--ink-soft); display: flex; align-items: center; gap: 6px; }
+.float-card .fc-title .material-symbols-outlined { font-size: 1.05rem; color: var(--primary); }
+
+.card-invoice { grid-column: 1; grid-row: 1; align-self: start; justify-self: start; width: min(280px, 100%); animation: floatY 7s ease-in-out infinite; }
+.card-invoice .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: .78rem; color: var(--ink-soft); }
+.card-invoice .row b { color: var(--ink); font-weight: 600; }
+.card-invoice .total { margin-top: 10px; display: flex; justify-content: space-between; font-weight: 800; font-size: .95rem; }
+.card-invoice .gst-chip { display:inline-block; font-size:.65rem; font-weight:700; color:var(--secondary-700); background:rgba(0,200,83,.12); padding:3px 8px; border-radius:6px; }
+
+.card-analytics { grid-column: 1; grid-row: 2; align-self: end; justify-self: start; margin-left: 8%; width: min(200px, 100%); animation: floatY 8s ease-in-out infinite 1s; }
+.ring { width: 84px; height: 84px; border-radius: 50%; margin-inline: auto; display: flex; align-items: center; justify-content: center; background: conic-gradient(var(--secondary) 0 72%, var(--bg-subtle) 72% 100%); }
+.ring::after { content: '72%'; width: 62px; height: 62px; border-radius: 50%; background: var(--card); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
+
+.card-stock { grid-column: 2; grid-row: 1; align-self: start; justify-self: end; width: min(220px, 100%); animation: floatY 9s ease-in-out infinite .4s; }
+.bar-track { height: 6px; background: var(--bg-subtle); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+.bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.stock-row { font-size: .74rem; color: var(--ink-soft); margin-top: 12px; }
+.stock-row:first-of-type { margin-top: 4px; }
+.stock-row b { color: var(--ink); }
+
+.card-payment { grid-column: 2; grid-row: 2; align-self: end; justify-self: end; width: min(190px, 100%); animation: floatY 7.5s ease-in-out infinite .8s; }
+.card-payment .pay-badge { display:flex; align-items:center; gap:8px; background: var(--bg-subtle); padding:10px; border-radius: var(--radius-sm); }
+.card-payment .pay-badge .material-symbols-outlined { color: var(--secondary-700); }
+.card-payment .pay-amt { margin-top:12px; font-size:1.3rem; font-weight:800; }
+
+@keyframes floatY { 0%,100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-14px) rotate(var(--r, 0deg)); } }
+.card-invoice { --r: -2.5deg; }
+.card-analytics { --r: 2deg; }
+.card-stock { --r: 3deg; }
+.card-payment { --r: -3deg; }
+
+/* ============================================================
+   6. STATS
+   ============================================================ */
+.stats { padding-block: clamp(48px, 7vw, 72px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-subtle); }
+.stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; text-align: center; }
+.stat-value { font-size: clamp(1.9rem, 1.5rem + 1.5vw, 2.7rem); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.02em; background: linear-gradient(100deg, var(--primary), var(--secondary-700)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat-label { margin-top: 6px; font-size: .88rem; color: var(--ink-soft); font-weight: 500; }
+
+/* ============================================================
+   7. FEATURES (bento hierarchy)
+   ============================================================ */
+.features { padding-block: clamp(72px, 10vw, 120px); }
+.bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.feat-card {
+  grid-column: span 2;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-1);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .3s ease;
+}
+.feat-card.core { grid-column: span 2; padding: 30px; }
+.feat-card.support { grid-column: span 2; }
+@media (min-width: 900px) {
+  .feat-card.support { grid-column: span 1; }
+}
+.feat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); border-color: rgba(25,118,210,.25); }
+
+.feat-icon {
+  width: 50px; height: 50px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--primary-100), rgba(0,200,83,.14));
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+[data-theme="dark"] .feat-icon { color: #7FB2F5; }
+.feat-icon .material-symbols-outlined { font-size: 1.5rem; }
+
+.feat-card h3 { font-size: 1.12rem; font-weight: 700; letter-spacing: -.01em; }
+.feat-card > p.desc { margin-top: 6px; color: var(--ink-faint); font-size: .86rem; }
+
+.feat-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.feat-tags span {
+  font-size: .76rem; font-weight: 500; color: var(--ink-soft);
+  background: var(--bg-subtle); border: 1px solid var(--border);
+  padding: 6px 11px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.feat-tags span .material-symbols-outlined { font-size: .95rem; color: var(--secondary-700); }
+
+/* ============================================================
+   8. INDUSTRIES (opposite-direction marquee)
+   ============================================================ */
+.industries { padding-block: clamp(60px, 8vw, 100px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+.marquee { display: flex; gap: 16px; width: max-content; }
+.marquee-row { overflow: hidden; margin-block: 8px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-row .marquee { animation: scrollLeft 46s linear infinite; }
+.marquee-row.reverse .marquee { animation-name: scrollRight; animation-duration: 52s; }
+.marquee-row:hover .marquee { animation-play-state: paused; }
+@keyframes scrollLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes scrollRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-row .marquee { animation: none; flex-wrap: wrap; width: 100%; }
+}
+
+.industry-chip {
+  flex: 0 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--card-border);
+  padding: 12px 18px; border-radius: 999px;
+  box-shadow: var(--shadow-1);
+  font-size: .88rem; font-weight: 600;
+}
+.industry-chip .material-symbols-outlined { color: var(--primary); font-size: 1.15rem; }
+.industry-chip.plus { background: linear-gradient(100deg, var(--primary), var(--secondary-700)); color: #fff; }
+.industry-chip.plus .material-symbols-outlined { color: #fff; }
+
+/* ============================================================
+   9. WHY BILLVEXA (scroll-snap ribbon)
+   ============================================================ */
+.why { padding-block: clamp(72px, 10vw, 120px); }
+.ribbon { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 14px; margin: 0 -4px; padding-inline: 4px; scrollbar-width: thin; }
+.ribbon::-webkit-scrollbar { height: 6px; }
+.ribbon::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.why-card {
+  scroll-snap-align: start;
+  flex: 0 0 clamp(190px, 22vw, 230px);
+  background: var(--card); border: 1px solid var(--card-border);
+  border-radius: var(--radius-md); padding: 22px;
+  box-shadow: var(--shadow-1);
+}
+.why-card .num { font-size: .75rem; font-weight: 700; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.why-card .material-symbols-outlined { color: var(--secondary-700); font-size: 1.6rem; margin-top: 10px; }
+.why-card h4 { margin-top: 12px; font-size: 1.02rem; font-weight: 700; }
+.why-card p { margin-top: 6px; font-size: .82rem; color: var(--ink-faint); line-height: 1.55; }
+
+/* ============================================================
+   10. SCREENSHOTS (mock product previews)
+   ============================================================ */
+.screens { padding-block: clamp(72px, 10vw, 120px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.screens-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.mock-screen { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); overflow: hidden; }
+.mock-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--bg-subtle); }
+[data-theme="dark"] .mock-head { background: rgba(255,255,255,.02); }
+.mock-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+.mock-head span.mock-title { margin-left: 6px; font-size: .74rem; font-weight: 600; color: var(--ink-faint); }
+.mock-body { padding: 16px; min-height: 190px; display: flex; flex-direction: column; gap: 10px; }
+.mock-caption { text-align: center; padding: 14px; font-size: .84rem; font-weight: 600; color: var(--ink-soft); border-top: 1px solid var(--border); }
+
+.mock-line { height: 9px; border-radius: 4px; background: var(--bg-subtle); }
+[data-theme="dark"] .mock-line { background: rgba(255,255,255,.06); }
+.mw-100{width:100%}.mw-85{width:85%}.mw-70{width:70%}.mw-55{width:55%}.mw-40{width:40%}.mw-30{width:30%}
+
+.mock-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.mock-kpi { background: var(--bg-subtle); border-radius: 10px; padding: 10px; }
+[data-theme="dark"] .mock-kpi { background: rgba(255,255,255,.04); }
+.mock-kpi b { display: block; font-size: 1rem; font-weight: 800; }
+.mock-kpi small { font-size: .66rem; color: var(--ink-faint); }
+
+.mock-chart { display: flex; align-items: flex-end; gap: 6px; height: 80px; }
+.mock-chart i { flex: 1; border-radius: 5px 5px 0 0; background: linear-gradient(180deg, var(--primary), var(--secondary)); }
+.bh-30{height:30%}.bh-45{height:45%}.bh-55{height:55%}.bh-65{height:65%}.bh-75{height:75%}.bh-85{height:85%}.bh-95{height:95%}.bh-100{height:100%}
+
+.mock-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 8px; background: var(--bg-subtle); }
+[data-theme="dark"] .mock-row { background: rgba(255,255,255,.04); }
+.mock-row .material-symbols-outlined { font-size: 1rem; color: var(--primary); }
+.mock-chip { font-size: .64rem; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+.chip-green { background: rgba(0,200,83,.14); color: var(--secondary-700); }
+.chip-amber { background: rgba(255,179,0,.16); color: var(--accent-700); }
+.chip-blue { background: var(--primary-100); color: var(--primary-700); }
+.self-start { align-self: flex-start; }
+
+.mock-avatar { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); flex-shrink: 0; }
+
+.mock-cart-total { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px dashed var(--border); font-weight: 800; }
+.mock-pay-btn { background: linear-gradient(100deg, var(--primary), var(--secondary-700)); color: #fff; font-size: .74rem; font-weight: 700; padding: 8px 14px; border-radius: 8px; }
+
+/* ============================================================
+   11. ROADMAP
+   ============================================================ */
+.roadmap { padding-block: clamp(72px, 10vw, 120px); }
+.road-line { position: relative; display: flex; flex-direction: column; gap: 0; max-width: 640px; margin-inline: auto; }
+.road-step { position: relative; padding-left: 54px; padding-bottom: 40px; }
+.road-step:last-child { padding-bottom: 0; }
+.road-step::before {
+  content: ''; position: absolute; left: 15px; top: 32px; bottom: -8px; width: 2px;
+  background: var(--border);
+}
+.road-step:last-child::before { display: none; }
+.road-dot {
+  position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%;
+  background: var(--card); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center; color: var(--ink-faint);
+}
+.road-dot .material-symbols-outlined { font-size: 1.05rem; }
+.road-step.current .road-dot { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 0 6px var(--primary-100); animation: pulseDot 2.2s ease-in-out infinite; }
+.road-step.done .road-dot { border-color: var(--secondary-700); color: var(--secondary-700); background: rgba(0,200,83,.1); }
+@keyframes pulseDot { 0%,100% { box-shadow: 0 0 0 6px var(--primary-100); } 50% { box-shadow: 0 0 0 10px transparent; } }
+
+.road-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 16px 20px; box-shadow: var(--shadow-1); }
+.road-step.current .road-card { border-color: rgba(25,118,210,.3); box-shadow: var(--glow-primary); }
+.road-card .road-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.road-card h4 { font-size: 1rem; font-weight: 700; }
+.road-badge { font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--primary); color: #fff; }
+.road-card p { margin-top: 6px; font-size: .86rem; color: var(--ink-faint); }
+
+/* ============================================================
+   12. FAQ
+   ============================================================ */
+.faq { padding-block: clamp(72px, 10vw, 120px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.faq-list { max-width: 760px; margin-inline: auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md); box-shadow: var(--shadow-1); overflow: hidden; }
+.faq-item summary {
+  list-style: none; cursor: pointer; padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  font-weight: 600; font-size: .98rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .material-symbols-outlined { transition: transform .3s ease; color: var(--primary); flex-shrink: 0; }
+.faq-item[open] summary .material-symbols-outlined { transform: rotate(180deg); }
+.faq-answer { padding: 0 22px 20px; color: var(--ink-soft); font-size: .9rem; line-height: 1.65; }
+
+/* ============================================================
+   13. NOTIFY ME
+   ============================================================ */
+.notify { padding-block: clamp(80px, 10vw, 130px); }
+.notify-card {
+  position: relative; overflow: hidden;
+  max-width: 780px; margin-inline: auto; text-align: center;
+  border-radius: var(--radius-xl);
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 6vw, 60px);
+  background: linear-gradient(135deg, var(--primary-700), var(--primary) 55%, var(--secondary-700));
+  color: #fff; box-shadow: var(--shadow-3);
+}
+.notify-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 45%), radial-gradient(circle at 85% 80%, rgba(255,179,0,.25), transparent 40%);
+}
+.notify-card > * { position: relative; }
+.notify-card h2 { font-size: var(--fs-h2); font-weight: 800; text-wrap: balance; }
+.notify-card p { margin-top: 12px; opacity: .92; font-size: var(--fs-lead); }
+.notify-form { margin-top: 30px; display: flex; gap: 10px; max-width: 460px; margin-inline: auto; flex-wrap: wrap; }
+.notify-form input {
+  flex: 1 1 240px; min-width: 0;
+  padding: 15px 18px; border-radius: var(--radius-sm); border: 1.5px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.12); color: #fff; font-family: var(--font); font-size: .95rem;
+  backdrop-filter: blur(6px);
+}
+.notify-form input::placeholder { color: rgba(255,255,255,.72); }
+.notify-form input:focus { outline: none; border-color: #fff; background: rgba(255,255,255,.18); }
+.notify-form button {
+  background: #fff; color: var(--primary-700); font-weight: 700; padding: 15px 24px; border-radius: var(--radius-sm); border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px; transition: transform .2s ease;
+}
+.notify-form button:hover { transform: translateY(-2px); }
+.notify-error { margin-top: 10px; font-size: .82rem; color: #FFE0B2; min-height: 1.2em; }
+.notify-note { margin-top: 14px; font-size: .78rem; opacity: .75; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+/* snackbar */
+.snackbar {
+  position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 30px);
+  background: var(--ink); color: var(--bg); padding: 14px 22px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 500;
+  box-shadow: var(--shadow-3); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; z-index: 200;
+}
+[data-theme="dark"] .snackbar { background: var(--bg-elevated); color: var(--ink); border: 1px solid var(--border); }
+.snackbar.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.snackbar .material-symbols-outlined { color: var(--secondary); }
+
+/* ============================================================
+   14. FOOTER
+   ============================================================ */
+.footer { padding-block: 60px 30px; border-top: 1px solid var(--border); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; }
+.footer-brand p { margin-top: 12px; color: var(--ink-faint); font-size: .88rem; max-width: 30ch; line-height: 1.6; }
+.footer-col h5 { font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); margin-bottom: 14px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: .9rem; color: var(--ink-soft); transition: color .2s ease; }
+.footer-col a:hover { color: var(--primary); }
+.footer-bottom { margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; font-size: .82rem; color: var(--ink-faint); }
+.footer-socials { display: flex; gap: 10px; }
+
+/* ============================================================
+   15. RESPONSIVE
+   ============================================================ */
+@media (max-width: 980px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { height: 380px; margin-top: 20px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 16px; }
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .feat-card, .feat-card.core, .feat-card.support { grid-column: span 2; }
+  .screens-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .screens-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#main" class="brand" aria-label="BillVexa home">
+      <span class="brand-mark" aria-hidden="true">BV</span>
+      BillVexa
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#industries">Industries</a>
+      <a href="#why">Why Us</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="material-symbols-outlined icon-light" aria-hidden="true">dark_mode</span>
+        <span class="material-symbols-outlined icon-dark" aria-hidden="true">light_mode</span>
+      </button>
+      <a href="#notify" class="btn btn-primary btn-sm">Notify Me</a>
+      <button class="icon-btn nav-burger" id="burger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <a href="#features">Features</a>
+  <a href="#industries">Industries</a>
+  <a href="#why">Why Us</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#faq">FAQ</a>
+  <a href="#notify" class="btn btn-primary mt-20">Notify Me</a>
+</div>
+
+<main id="main">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-blobs" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal is-visible">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>Launching Soon in India</span>
+        <h1>India's <span class="accent-word">Next Generation</span> Billing &amp; Inventory Platform</h1>
+        <p class="lead">BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built specifically for Indian retailers, wholesalers, and SMEs.</p>
+        <div class="hero-actions">
+          <a href="#notify" class="btn btn-primary" data-ripple>
+            <span class="material-symbols-outlined" aria-hidden="true">notifications_active</span>
+            Notify Me
+          </a>
+          <a href="#roadmap" class="btn btn-ghost" data-ripple>
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            Coming Soon
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars" aria-hidden="true">
+            <span>KM</span><span>RS</span><span>AP</span><span>SN</span>
+          </div>
+          <small>Trusted early access by 200+ Indian retailers on the waitlist</small>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal is-visible" aria-hidden="true">
+        <div class="stage">
+          <div class="float-card card-invoice">
+            <div class="fc-head">
+              <span class="fc-title"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Tax Invoice</span>
+              <span class="gst-chip">GST READY</span>
+            </div>
+            <div class="row"><span>Smartphone 128GB</span><b>₹15,000.00</b></div>
+            <div class="row"><span>Induction Cooktop</span><b>₹2,000.00</b></div>
+            <div class="row"><span>CGST + SGST (18%)</span><b>₹3,060.00</b></div>
+            <div class="total"><span>Total</span><span>₹20,060.00</span></div>
+          </div>
+
+          <div class="float-card card-analytics">
+            <div class="fc-head"><span class="fc-title"><span class="material-symbols-outlined" aria-hidden="true">insights</span>Monthly Growth</span></div>
+            <div class="ring"></div>
+          </div>
+
+          <div class="float-card card-stock">
+            <div class="fc-head"><span class="fc-title"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>Live Stock</span></div>
+            <div class="stock-row"><b>Refrigerator 190L</b></div>
+            <div class="bar-track"><div class="bar-fill mw-85"></div></div>
+            <div class="stock-row"><b>LED TV 43"</b></div>
+            <div class="bar-track"><div class="bar-fill mw-40"></div></div>
+          </div>
+
+          <div class="float-card card-payment">
+            <div class="fc-head"><span class="fc-title"><span class="material-symbols-outlined" aria-hidden="true">payments</span>Payment</span></div>
+            <div class="pay-badge"><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>UPI Received</div>
+            <div class="pay-amt">₹1,245</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS
+       ============================================================ -->
+  <section class="stats" aria-label="Platform highlights">
+    <div class="container stats-grid">
+      <div class="reveal">
+        <div class="stat-value" data-counter data-target="100" data-suffix="+">0</div>
+        <div class="stat-label">Features</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-value" data-counter data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">GST Ready</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-value">24×7</div>
+        <div class="stat-label">Cloud Access</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-value">Unlimited</div>
+        <div class="stat-label">Products</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-value">Unlimited</div>
+        <div class="stat-label">Invoices</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES — bento hierarchy: core modules get bigger cards
+       ============================================================ -->
+  <section class="features" id="features" aria-label="Features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">apps</span>Everything In One Place</span>
+        <h2>Built to run the whole shop — not just the till</h2>
+        <p>From the counter to the balance sheet, every module is designed around how Indian retailers actually work — GST, batches, expiry dates, loose selling, and all.</p>
+      </div>
+
+      <div class="bento reveal-stagger">
+        <!-- core modules -->
+        <article class="feat-card core">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></div>
+          <h3>Smart Billing</h3>
+          <p class="desc">Bill in seconds, stay compliant by default.</p>
+          <div class="feat-tags">
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>GST Ready Invoices</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Fast Checkout</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Barcode Billing</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Thermal Printing</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>UPI Payments</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>B2B &amp; B2C Billing</span>
+          </div>
+        </article>
+
+        <article class="feat-card core">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span></div>
+          <h3>Inventory Management</h3>
+          <p class="desc">Know exactly what's on every shelf, everywhere.</p>
+          <div class="feat-tags">
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Real-time Stock</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Multi Warehouse</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Batch Tracking</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Expiry Tracking</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Stock Alerts</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Serial Number Tracking</span>
+          </div>
+        </article>
+
+        <!-- supporting modules -->
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">category</span></div>
+          <h3>Product Catalog</h3>
+          <p class="desc">One catalog, every product type.</p>
+          <div class="feat-tags">
+            <span>Unlimited Products</span><span>Variants</span><span>Units</span><span>Categories</span><span>Brands</span><span>HSN Codes</span><span>Barcode Support</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div>
+          <h3>Purchase Management</h3>
+          <p class="desc">From order to shelf, fully tracked.</p>
+          <div class="feat-tags">
+            <span>Purchase Orders</span><span>Supplier Management</span><span>Goods Receiving</span><span>Purchase History</span><span>Cost Tracking</span><span>Price Updates</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span></div>
+          <h3>Sales Management</h3>
+          <p class="desc">Every sale, return and rupee accounted for.</p>
+          <div class="feat-tags">
+            <span>Sales Orders</span><span>Returns</span><span>Credit Notes</span><span>Customer Ledger</span><span>Outstanding Payments</span><span>Daily Sales</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">group</span></div>
+          <h3>Customer Management</h3>
+          <p class="desc">Turn one-time buyers into regulars.</p>
+          <div class="feat-tags">
+            <span>Customer Profiles</span><span>Loyalty</span><span>Credit Accounts</span><span>Purchase History</span><span>WhatsApp Bills</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span></div>
+          <h3>Supplier Management</h3>
+          <p class="desc">Know who you owe, and when it's due.</p>
+          <div class="feat-tags">
+            <span>Vendor Profiles</span><span>Outstanding Bills</span><span>Purchase Analytics</span><span>Payment Tracking</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">account_balance</span></div>
+          <h3>GST &amp; Compliance</h3>
+          <p class="desc">Filing-ready reports, always.</p>
+          <div class="feat-tags">
+            <span>CGST</span><span>SGST</span><span>IGST</span><span>GST Reports</span><span>HSN Reports</span><span>Tax Summary</span><span>Invoice Export</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">insights</span></div>
+          <h3>Analytics</h3>
+          <p class="desc">See the business, not just the bills.</p>
+          <div class="feat-tags">
+            <span>Revenue Dashboard</span><span>Top Products</span><span>Profit Analysis</span><span>Business Reports</span><span>Inventory Reports</span><span>Tax Reports</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">store</span></div>
+          <h3>Multi Business</h3>
+          <p class="desc">One login, every branch.</p>
+          <div class="feat-tags">
+            <span>Multiple Shops</span><span>Role Management</span><span>Employee Permissions</span><span>Owner Dashboard</span><span>Cloud Sync</span>
+          </div>
+        </article>
+
+        <article class="feat-card support">
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">shield_lock</span></div>
+          <h3>Security</h3>
+          <p class="desc">Your data, locked down properly.</p>
+          <div class="feat-tags">
+            <span>Encrypted Data</span><span>Automatic Backups</span><span>Role Based Access</span><span>Secure Authentication</span><span>Audit Logs</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INDUSTRIES — two-row marquee scrolling opposite directions
+       ============================================================ -->
+  <section class="industries" id="industries" aria-label="Industries supported">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">storefront</span>Built For Every Kind Of Shop</span>
+        <h2>Industries BillVexa Supports</h2>
+        <p>Whatever you sell, BillVexa adapts to how you sell it — batches, expiry, serials, or loose weight.</p>
+      </div>
+    </div>
+
+    <div class="marquee-row" aria-hidden="true">
+      <div class="marquee">
+        <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medication</span>Medical Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">checkroom</span>Garments</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">edit_note</span>Stationery</span>
+        <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
+        <!-- duplicate for seamless loop -->
+        <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medication</span>Medical Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">checkroom</span>Garments</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">edit_note</span>Stationery</span>
+        <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
+      </div>
+    </div>
+
+    <div class="marquee-row reverse" aria-hidden="true">
+      <div class="marquee">
+        <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">restaurant</span>Restaurants</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_cafe</span>Cafes</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">cake</span>Sweet Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">diamond</span>Jewellery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
+        <!-- duplicate for seamless loop -->
+        <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">restaurant</span>Restaurants</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_cafe</span>Cafes</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">cake</span>Sweet Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">diamond</span>Jewellery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY BILLVEXA — horizontal scroll-snap ribbon
+       ============================================================ -->
+  <section class="why" id="why" aria-label="Why BillVexa">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">favorite</span>Why BillVexa</span>
+        <h2>Ten reasons shop owners are already waiting for us</h2>
+        <p>Scroll sideways — this is the short version of everything above.</p>
+      </div>
+
+      <div class="ribbon reveal">
+        <div class="why-card"><span class="num">01</span><span class="material-symbols-outlined" aria-hidden="true">emoji_objects</span><h4>Simple</h4><p>No training manuals. If you can use WhatsApp, you can use BillVexa.</p></div>
+        <div class="why-card"><span class="num">02</span><span class="material-symbols-outlined" aria-hidden="true">bolt</span><h4>Fast</h4><p>Bill a customer in under 10 seconds, even during peak hour rush.</p></div>
+        <div class="why-card"><span class="num">03</span><span class="material-symbols-outlined" aria-hidden="true">verified</span><h4>Reliable</h4><p>Built on infrastructure that doesn't go down when you need it most.</p></div>
+        <div class="why-card"><span class="num">04</span><span class="material-symbols-outlined" aria-hidden="true">payments</span><h4>Affordable</h4><p>Pricing designed for kirana margins, not enterprise budgets.</p></div>
+        <div class="why-card"><span class="num">05</span><span class="material-symbols-outlined" aria-hidden="true">cloud_done</span><h4>Cloud Based</h4><p>Your data, synced and safe — accessible from any device, anywhere.</p></div>
+        <div class="why-card"><span class="num">06</span><span class="material-symbols-outlined" aria-hidden="true">account_balance</span><h4>GST Ready</h4><p>Compliant invoices and filing-ready reports from day one.</p></div>
+        <div class="why-card"><span class="num">07</span><span class="material-symbols-outlined" aria-hidden="true">flag</span><h4>Made for India</h4><p>Loose selling, batches, expiry — built around how Indian shops actually run.</p></div>
+        <div class="why-card"><span class="num">08</span><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span><h4>Modern UI</h4><p>A clean, fast interface your staff will actually enjoy using.</p></div>
+        <div class="why-card"><span class="num">09</span><span class="material-symbols-outlined" aria-hidden="true">insights</span><h4>Powerful Reports</h4><p>Know your best sellers, slow movers, and margins at a glance.</p></div>
+        <div class="why-card"><span class="num">10</span><span class="material-symbols-outlined" aria-hidden="true">trending_up</span><h4>Unlimited Growth</h4><p>From one counter to multi-branch — BillVexa scales with you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREENSHOTS — mock product previews
+       ============================================================ -->
+  <section class="screens" aria-label="Product preview">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">preview</span>A First Look</span>
+        <h2>A glimpse of what's being built</h2>
+        <p>Actual product screens are still in design — here's the shape of what's coming.</p>
+      </div>
+
+      <div class="screens-grid reveal-stagger">
+        <!-- POS Billing -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">POS Billing</span></div>
+          <div class="mock-body">
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">shopping_basket</span><span class="mock-line mw-55"></span><span>₹120</span></div>
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">shopping_basket</span><span class="mock-line mw-40"></span><span>₹80</span></div>
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">shopping_basket</span><span class="mock-line mw-70"></span><span>₹340</span></div>
+            <div class="mock-cart-total"><span>Total ₹540</span><span class="mock-pay-btn">Charge</span></div>
+          </div>
+          <div class="mock-caption">POS Billing Screen</div>
+        </div>
+
+        <!-- Inventory -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Inventory</span></div>
+          <div class="mock-body">
+            <span class="mock-line mw-30"></span>
+            <div class="bar-track"><div class="bar-fill mw-85"></div></div>
+            <span class="mock-line mw-40"></span>
+            <div class="bar-track"><div class="bar-fill mw-55"></div></div>
+            <span class="mock-line mw-30"></span>
+            <div class="bar-track"><div class="bar-fill mw-30"></div></div>
+            <span class="mock-chip chip-amber self-start">Low Stock: 2 items</span>
+          </div>
+          <div class="mock-caption">Inventory</div>
+        </div>
+
+        <!-- Reports -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Reports</span></div>
+          <div class="mock-body">
+            <div class="mock-chart" aria-hidden="true">
+              <i class="bh-45"></i><i class="bh-65"></i><i class="bh-55"></i><i class="bh-85"></i><i class="bh-75"></i><i class="bh-95"></i><i class="bh-100"></i>
+            </div>
+            <span class="mock-chip chip-green self-start">Revenue up 18% this month</span>
+          </div>
+          <div class="mock-caption">Reports</div>
+        </div>
+
+        <!-- Purchase -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Purchase Entry</span></div>
+          <div class="mock-body">
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span><span class="mock-line mw-55"></span><span class="mock-chip chip-blue">PO #204</span></div>
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span><span class="mock-line mw-40"></span><span class="mock-chip chip-amber">Pending</span></div>
+            <div class="mock-row"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span><span class="mock-line mw-70"></span><span class="mock-chip chip-green">Received</span></div>
+          </div>
+          <div class="mock-caption">Purchase Screen</div>
+        </div>
+
+        <!-- Analytics -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Analytics</span></div>
+          <div class="mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><b>₹42k</b><small>Today</small></div>
+              <div class="mock-kpi"><b>318</b><small>Orders</small></div>
+              <div class="mock-kpi"><b>24%</b><small>Margin</small></div>
+            </div>
+            <div class="mock-chart" aria-hidden="true">
+              <i class="bh-30"></i><i class="bh-55"></i><i class="bh-45"></i><i class="bh-75"></i><i class="bh-65"></i>
+            </div>
+          </div>
+          <div class="mock-caption">Analytics</div>
+        </div>
+
+        <!-- Customer Management -->
+        <div class="mock-screen">
+          <div class="mock-head"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-title">Customers</span></div>
+          <div class="mock-body">
+            <div class="mock-row"><span class="mock-avatar" aria-hidden="true"></span><span class="mock-line mw-55"></span><span class="mock-chip chip-green">Paid</span></div>
+            <div class="mock-row"><span class="mock-avatar" aria-hidden="true"></span><span class="mock-line mw-40"></span><span class="mock-chip chip-amber">₹850 Due</span></div>
+            <div class="mock-row"><span class="mock-avatar" aria-hidden="true"></span><span class="mock-line mw-70"></span><span class="mock-chip chip-blue">Loyalty</span></div>
+          </div>
+          <div class="mock-caption">Customer Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ROADMAP
+       ============================================================ -->
+  <section class="roadmap" id="roadmap" aria-label="Roadmap">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">route</span>Roadmap</span>
+        <h2>Where we are, and where we're headed</h2>
+        <p>Built in the open, one milestone at a time.</p>
+      </div>
+
+      <div class="road-line reveal">
+        <div class="road-step current">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">construction</span></span>
+          <div class="road-card">
+            <div class="road-top"><h4>Development</h4><span class="road-badge">You are here — Now</span></div>
+            <p>Core billing, inventory, and GST engine are being built and tested.</p>
+          </div>
+        </div>
+        <div class="road-step">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">science</span></span>
+          <div class="road-card"><h4>Beta Launch</h4><p>Early access opens to waitlisted shops for real-world testing.</p></div>
+        </div>
+        <div class="road-step">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">flag</span></span>
+          <div class="road-card"><h4>Public Release</h4><p>BillVexa opens up to every retailer, wholesaler, and SME in India.</p></div>
+        </div>
+        <div class="road-step">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">smartphone</span></span>
+          <div class="road-card"><h4>Mobile Apps</h4><p>Native Android and iOS apps for billing on the move.</p></div>
+        </div>
+        <div class="road-step">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></span>
+          <div class="road-card"><h4>AI Insights</h4><p>Smart reorder suggestions, demand forecasting, and anomaly alerts.</p></div>
+        </div>
+        <div class="road-step">
+          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">corporate_fare</span></span>
+          <div class="road-card"><h4>Enterprise Features</h4><p>Advanced multi-branch controls, SSO, and custom integrations.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="faq" id="faq" aria-label="Frequently asked questions">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">help</span>Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>What is BillVexa?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">BillVexa is a cloud-based billing, POS, and inventory management platform built for Indian retailers, wholesalers, and small-to-medium businesses — covering GST invoicing, stock control, purchases, and reporting in one place.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Who is it for?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Kirana stores, supermarkets, pharmacies, electronics shops, garment stores, wholesalers, distributors, restaurants, and pretty much any Indian business that bills customers and tracks stock.</div>
+        </details>
+        <details class="faq-item">
+          <summary>When will it launch?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">We're actively in development. Join the waitlist below and you'll be the first to know when beta access opens.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Will there be mobile apps?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Yes. Native Android and iOS apps are on the roadmap, right after public release, so you can bill and check stock from anywhere.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it support GST?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Fully. CGST, SGST, and IGST are calculated automatically, with HSN-based rates and filing-ready GST reports built in from day one.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I migrate from Tally?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Migration tools for moving your product catalog, customers, and opening stock from Tally and similar software are planned as part of onboarding.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work offline?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">BillVexa is cloud-first. Limited offline billing with automatic sync once you're back online is on our roadmap for a future update.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOTIFY ME
+       ============================================================ -->
+  <section class="notify" id="notify" aria-label="Get notified at launch">
+    <div class="container">
+      <div class="notify-card reveal">
+        <h2>Be first through the door</h2>
+        <p>Leave your email and we'll let you know the moment BillVexa opens for early access — no spam, just the launch update.</p>
+        <form class="notify-form" id="notify-form" novalidate>
+          <label for="notify-email" class="visually-hidden">Email address</label>
+          <input type="email" id="notify-email" name="email" placeholder="you@yourshop.com" autocomplete="email" required />
+          <button type="submit" data-ripple>
+            Notify Me
+            <span class="material-symbols-outlined" aria-hidden="true">north_east</span>
+          </button>
+        </form>
+        <div class="notify-error" id="notify-error" role="alert"></div>
+        <div class="notify-note"><span class="material-symbols-outlined" aria-hidden="true">lock</span>We respect your inbox. Unsubscribe anytime.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#main" class="brand" aria-label="BillVexa home">
+          <span class="brand-mark" aria-hidden="true">BV</span>
+          BillVexa
+        </a>
+        <p>Made for Indian Businesses. GST-ready billing, inventory, and business management — coming soon.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:hello@billvexa.in">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get Started</h5>
+        <ul>
+          <li><a href="#notify">Join Waitlist</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 BillVexa. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" class="icon-btn" aria-label="BillVexa on X"><span class="material-symbols-outlined" aria-hidden="true">alternate_email</span></a>
+        <a href="#" class="icon-btn" aria-label="BillVexa on LinkedIn"><span class="material-symbols-outlined" aria-hidden="true">work</span></a>
+        <a href="mailto:hello@billvexa.in" class="icon-btn" aria-label="Email BillVexa"><span class="material-symbols-outlined" aria-hidden="true">mail</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="snackbar" id="snackbar" role="status" aria-live="polite">
+  <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+  <span id="snackbar-text">You're on the list! We'll email you at launch.</span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Theme toggle ---------- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('theme-toggle');
+  var storedTheme = localStorage.getItem('billvexa-theme');
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    root.setAttribute('data-theme', storedTheme);
+  }
+  themeToggle.addEventListener('click', function () {
+    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var current = root.getAttribute('data-theme') || (systemDark ? 'dark' : 'light');
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('billvexa-theme', next);
+  });
+
+  /* ---------- Sticky nav shadow on scroll ---------- */
+  var navEl = document.getElementById('nav');
+  var onScroll = function () {
+    navEl.classList.toggle('scrolled', window.scrollY > 8);
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Mobile drawer ---------- */
+  var burger = document.getElementById('burger-btn');
+  var drawer = document.getElementById('mobile-drawer');
+  burger.addEventListener('click', function () {
+    var isOpen = drawer.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+    burger.querySelector('.material-symbols-outlined').textContent = isOpen ? 'close' : 'menu';
+  });
+  drawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      drawer.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.querySelector('.material-symbols-outlined').textContent = 'menu';
+    });
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          if (entry.target.classList.contains('reveal-stagger')) {
+            Array.prototype.forEach.call(entry.target.children, function (child, i) {
+              child.style.setProperty('--i', i);
+              child.classList.add('reveal');
+              requestAnimationFrame(function () { child.classList.add('is-visible'); });
+            });
+          }
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------- Animated counters ---------- */
+  var counters = document.querySelectorAll('[data-counter]');
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduceMotion) { el.textContent = target + suffix; return; }
+    var start = 0;
+    var duration = 1400;
+    var startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(start + (target - start) * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { animateCounter(entry.target); cio.unobserve(entry.target); }
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cio.observe(el); });
+  } else {
+    counters.forEach(animateCounter);
+  }
+
+  /* ---------- Ripple effect ---------- */
+  document.querySelectorAll('[data-ripple]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var rect = btn.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      var span = document.createElement('span');
+      span.className = 'ripple';
+      span.style.width = span.style.height = size + 'px';
+      span.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      span.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      btn.appendChild(span);
+      span.addEventListener('animationend', function () { span.remove(); });
+    });
+  });
+
+  /* ---------- Hero parallax (desktop, pointer only) ---------- */
+  var stage = document.querySelector('.stage');
+  if (stage && window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
+    document.querySelector('.hero').addEventListener('mousemove', function (e) {
+      var x = (e.clientX / window.innerWidth - 0.5) * 14;
+      var y = (e.clientY / window.innerHeight - 0.5) * 14;
+      stage.style.transform = 'rotateY(' + x + 'deg) rotateX(' + (-y) + 'deg)';
+    });
+    document.querySelector('.hero').addEventListener('mouseleave', function () {
+      stage.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  }
+
+  /* ---------- Notify form ---------- */
+  var form = document.getElementById('notify-form');
+  var emailInput = document.getElementById('notify-email');
+  var errorEl = document.getElementById('notify-error');
+  var snackbar = document.getElementById('snackbar');
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var value = emailInput.value.trim();
+    if (!emailRegex.test(value)) {
+      errorEl.textContent = 'Please enter a valid email address.';
+      emailInput.focus();
+      return;
+    }
+    errorEl.textContent = '';
+    try {
+      var list = JSON.parse(localStorage.getItem('billvexa-notify-emails') || '[]');
+      if (list.indexOf(value) === -1) list.push(value);
+      localStorage.setItem('billvexa-notify-emails', JSON.stringify(list));
+    } catch (err) { /* localStorage unavailable — safe to ignore, no backend anyway */ }
+
+    document.getElementById('snackbar-text').textContent = "You're on the list! We'll email " + value + ' at launch.';
+    snackbar.classList.add('show');
+    form.reset();
+    clearTimeout(window.__bvxSnackbarTimer);
+    window.__bvxSnackbarTimer = setTimeout(function () { snackbar.classList.remove('show'); }, 4200);
+  });
+})();
+</script>
+</body>
+</html>
