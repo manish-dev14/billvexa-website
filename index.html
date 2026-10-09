@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>BillVexa — India's Next Generation Billing &amp; Inventory Platform</title>
-<meta name="description" content="BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built for Indian retailers, wholesalers, and SMEs. Coming soon." />
+<title>BillVexa — India's Next Generation GST Billing &amp; Stock Software</title>
+<meta name="description" content="BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built for Indian retailers, wholesalers, and SMEs. 14-day free trial, free setup." />
 <meta name="keywords" content="BillVexa, GST billing software, POS software India, inventory management, retail billing app, kirana store software, wholesale billing, GST invoice software, small business ERP India" />
 <meta name="author" content="BillVexa" />
 <meta name="robots" content="index, follow" />
@@ -13,15 +13,15 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="BillVexa" />
-<meta property="og:title" content="BillVexa — India's Next Generation Billing &amp; Inventory Platform" />
-<meta property="og:description" content="GST-ready billing, POS, inventory and business management — built specifically for Indian retailers, wholesalers, and SMEs. Launching soon." />
+<meta property="og:title" content="BillVexa — India's Next Generation GST Billing &amp; Stock Software" />
+<meta property="og:description" content="GST-ready billing, POS, inventory and business management — built specifically for Indian retailers, wholesalers, and SMEs. 14-day free trial, free setup." />
 <meta property="og:url" content="https://billvexa.in/" />
 <meta property="og:image" content="https://billvexa.in/og-image.png" />
 <meta property="og:locale" content="en_IN" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="BillVexa — India's Next Generation Billing &amp; Inventory Platform" />
+<meta name="twitter:title" content="BillVexa — India's Next Generation GST Billing &amp; Stock Software" />
 <meta name="twitter:description" content="GST-ready billing, POS, inventory and business management — built for Indian retailers, wholesalers, and SMEs." />
 <meta name="twitter:image" content="https://billvexa.in/og-image.png" />
 
@@ -32,7 +32,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&amp;display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+<!-- Only the icons used on this page are downloaded. When you add a new icon,
+     add its name to icon_names below (keep the list in A–Z order). -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0&amp;icon_names=account_balance,alternate_email,apps,arrow_forward,auto_awesome,badge,bolt,call,category,chair,check,check_circle,close,cloud_done,dark_mode,devices,directions_car,emoji_objects,error,event_available,expand_more,favorite,flag,group,handshake,hardware,help,info,insights,inventory_2,light_mode,local_laundry_service,local_shipping,mail,medical_services,menu,menu_book,payments,point_of_sale,preview,receipt_long,redeem,route,sell,shield_lock,shopping_bag,shopping_basket,shopping_cart,smartphone,spa,storefront,trending_up,verified,warehouse,work&amp;display=block" rel="stylesheet" />
 
 <!-- Structured data -->
 <script type="application/ld+json">
@@ -48,9 +50,8 @@
   "image": "https://billvexa.in/og-image.png",
   "offers": {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR",
-    "availability": "https://schema.org/PreOrder"
+    "price": "1499",
+    "priceCurrency": "INR"
   },
   "publisher": {
     "@type": "Organization",
@@ -58,7 +59,7 @@
     "url": "https://billvexa.in/"
   },
   "areaServed": "IN",
-  "inLanguage": "en-IN"
+  "inLanguage": ["en-IN", "hi-IN"]
 }
 </script>
 
@@ -92,6 +93,9 @@ h1, h2, h3, h4, p { margin: 0; }
   --secondary-700: #00873B;
   --accent: #FFB300;
   --accent-700: #C77E00;
+  --danger: #C62828;
+  --success-ink: #00703A;
+  --info-ink: #0D47A1;
 
   /* surfaces & text */
   --bg: #F5F7FA;
@@ -121,7 +125,7 @@ h1, h2, h3, h4, p { margin: 0; }
 
   /* type */
   --font: 'Poppins', 'Segoe UI', sans-serif;
-  --fs-display: clamp(2.4rem, 1.85rem + 2.6vw, 4.1rem);
+  --fs-display: clamp(2rem, 1.5rem + 2.1vw, 3.3rem);
   --fs-h2: clamp(1.7rem, 1.45rem + 1.2vw, 2.65rem);
   --fs-h3: clamp(1.2rem, 1.08rem + 0.5vw, 1.5rem);
   --fs-lead: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
@@ -140,6 +144,9 @@ h1, h2, h3, h4, p { margin: 0; }
   --nav-bg: rgba(11, 18, 32, 0.68);
   --overlay-sheen: rgba(255, 255, 255, 0.04);
   --primary-100: rgba(25,118,210,0.16);
+  --danger: #FF8A80;
+  --success-ink: #5BE08F;
+  --info-ink: #7FB2F5;
 
   --shadow-1: 0 1px 2px rgba(0,0,0,.35);
   --shadow-2: 0 10px 28px -10px rgba(0,0,0,.55);
@@ -161,6 +168,9 @@ h1, h2, h3, h4, p { margin: 0; }
     --nav-bg: rgba(11, 18, 32, 0.68);
     --overlay-sheen: rgba(255, 255, 255, 0.04);
     --primary-100: rgba(25,118,210,0.16);
+    --danger: #FF8A80;
+    --success-ink: #5BE08F;
+    --info-ink: #7FB2F5;
     --shadow-1: 0 1px 2px rgba(0,0,0,.35);
     --shadow-2: 0 10px 28px -10px rgba(0,0,0,.55);
     --shadow-3: 0 26px 54px -14px rgba(0,0,0,.65);
@@ -305,6 +315,13 @@ section { position: relative; }
 .reveal-stagger.is-visible > * { transition-delay: calc(var(--i, 0) * 70ms); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 
+/* Hindi (Devanagari): letter-spacing breaks up joined letters, and the
+   marks above/below the line need more room than Latin text does. */
+:lang(hi) :is(h1, h2, h3, h4, h5, .eyebrow, .brand, .stat-value, .price-offer, .price-now, .step-num, .btn) { letter-spacing: 0; }
+:lang(hi) .hero-copy h1 { line-height: 1.28; }
+:lang(hi) .section-head h2, :lang(hi) .demo-copy h2 { line-height: 1.35; }
+:lang(hi) .stat-value { font-size: clamp(1.5rem, 1.2rem + 1.1vw, 2.1rem); line-height: 1.4; }
+
 /* ============================================================
    4. NAVIGATION
    ============================================================ */
@@ -348,6 +365,18 @@ section { position: relative; }
 #theme-toggle .icon-dark { display: none; }
 [data-theme="dark"] #theme-toggle .icon-light { display: none; }
 [data-theme="dark"] #theme-toggle .icon-dark { display: inline; }
+
+.nav-phone { display: none; align-items: center; gap: 6px; font-size: .88rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+.nav-phone:hover { color: var(--primary); }
+.nav-phone .material-symbols-outlined { color: var(--primary); font-size: 1.1rem; }
+@media (min-width: 1180px) { .nav-phone { display: inline-flex; } }
+.lang-btn {
+  height: 40px; padding: 0 14px; border-radius: 999px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  font-size: .86rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.lang-btn:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
 
 .nav-burger { display: none; }
 
@@ -399,6 +428,9 @@ section { position: relative; }
   line-height: 1.7;
   max-width: 54ch;
 }
+.hero-points { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
+.hero-points li { display: flex; align-items: flex-start; gap: 10px; font-size: .98rem; font-weight: 500; line-height: 1.5; }
+.hero-points .material-symbols-outlined { color: var(--secondary-700); margin-top: 2px; flex-shrink: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 
 .hero-trust { display: flex; align-items: center; gap: 18px; margin-top: 34px; flex-wrap: wrap; }
@@ -518,8 +550,8 @@ section { position: relative; }
 .industries { padding-block: clamp(60px, 8vw, 100px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
 .marquee { display: flex; gap: 16px; width: max-content; }
 .marquee-row { overflow: hidden; margin-block: 8px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-.marquee-row .marquee { animation: scrollLeft 46s linear infinite; }
-.marquee-row.reverse .marquee { animation-name: scrollRight; animation-duration: 52s; }
+.marquee-row .marquee { animation: scrollLeft 70s linear infinite; }
+.marquee-row.reverse .marquee { animation-name: scrollRight; animation-duration: 78s; }
 .marquee-row:hover .marquee { animation-play-state: paused; }
 @keyframes scrollLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes scrollRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
@@ -538,6 +570,13 @@ section { position: relative; }
 .industry-chip .material-symbols-outlined { color: var(--primary); font-size: 1.15rem; }
 .industry-chip.plus { background: linear-gradient(100deg, var(--primary), var(--secondary-700)); color: #fff; }
 .industry-chip.plus .material-symbols-outlined { color: #fff; }
+
+.shop-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: clamp(28px, 4vw, 44px); }
+.shop-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-1); }
+.shop-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.shop-top > .material-symbols-outlined { color: var(--primary); font-size: 1.5rem; }
+.shop-top h3 { font-size: 1.05rem; font-weight: 700; }
+.shop-card p { margin-top: 10px; font-size: .86rem; color: var(--ink-soft); line-height: 1.6; }
 
 /* ============================================================
    9. WHY BILLVEXA (scroll-snap ribbon)
@@ -600,33 +639,52 @@ section { position: relative; }
 .mock-pay-btn { background: linear-gradient(100deg, var(--primary), var(--secondary-700)); color: #fff; font-size: .74rem; font-weight: 700; padding: 8px 14px; border-radius: 8px; }
 
 /* ============================================================
-   11. ROADMAP
+   11. HOW IT WORKS + PRICING
    ============================================================ */
-.roadmap { padding-block: clamp(72px, 10vw, 120px); }
-.road-line { position: relative; display: flex; flex-direction: column; gap: 0; max-width: 640px; margin-inline: auto; }
-.road-step { position: relative; padding-left: 54px; padding-bottom: 40px; }
-.road-step:last-child { padding-bottom: 0; }
-.road-step::before {
-  content: ''; position: absolute; left: 15px; top: 32px; bottom: -8px; width: 2px;
-  background: var(--border);
-}
-.road-step:last-child::before { display: none; }
-.road-dot {
-  position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%;
-  background: var(--card); border: 2px solid var(--border);
-  display: flex; align-items: center; justify-content: center; color: var(--ink-faint);
-}
-.road-dot .material-symbols-outlined { font-size: 1.05rem; }
-.road-step.current .road-dot { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 0 6px var(--primary-100); animation: pulseDot 2.2s ease-in-out infinite; }
-.road-step.done .road-dot { border-color: var(--secondary-700); color: var(--secondary-700); background: rgba(0,200,83,.1); }
-@keyframes pulseDot { 0%,100% { box-shadow: 0 0 0 6px var(--primary-100); } 50% { box-shadow: 0 0 0 10px transparent; } }
+.steps { padding-block: clamp(72px, 10vw, 120px); }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.step-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-1); }
+.step-num { font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.02em; background: linear-gradient(100deg, var(--primary), var(--secondary-700)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step-card h3 { margin-top: 8px; font-size: 1.12rem; font-weight: 700; }
+.step-card p { margin-top: 6px; font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
 
-.road-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 16px 20px; box-shadow: var(--shadow-1); }
-.road-step.current .road-card { border-color: rgba(25,118,210,.3); box-shadow: var(--glow-primary); }
-.road-card .road-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.road-card h4 { font-size: 1rem; font-weight: 700; }
-.road-badge { font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--primary); color: #fff; }
-.road-card p { margin-top: 6px; font-size: .86rem; color: var(--ink-faint); }
+.pricing { padding-block: clamp(72px, 10vw, 120px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.price-card {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+  max-width: 980px; margin-inline: auto;
+  border-radius: var(--radius-xl); padding: clamp(26px, 4vw, 44px);
+  background: linear-gradient(135deg, var(--primary-700), var(--primary) 55%, var(--secondary-700));
+  color: #fff; box-shadow: var(--shadow-3);
+}
+.price-main { flex: 1 1 420px; min-width: 0; }
+.price-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.price-plan { font-weight: 700; font-size: 1rem; color: var(--accent); }
+.price-offer { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; background: var(--accent); color: #0F1B2D; }
+.price-amount { margin-top: 12px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.price-now { font-size: clamp(2.4rem, 2rem + 2vw, 3.4rem); font-weight: 800; letter-spacing: -.02em; line-height: 1; }
+.price-was { font-size: 1.15rem; text-decoration: line-through; opacity: .7; }
+.price-per { font-size: 1.05rem; opacity: .9; }
+.price-points { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.price-points li { display: flex; align-items: center; gap: 6px; font-size: .92rem; font-weight: 500; }
+.price-points .material-symbols-outlined { color: var(--accent); font-size: 1.1rem; }
+.price-note { margin-top: 16px; font-size: .84rem; opacity: .85; }
+.price-cta {
+  position: relative; overflow: hidden; flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #0F1B2D; font-weight: 700; font-size: 1rem;
+  padding: 15px 26px; border-radius: var(--radius-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.price-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(255,179,0,.7); }
+.soon-row {
+  max-width: 980px; margin: 22px auto 0; padding: 16px 20px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md);
+  font-size: .86rem;
+}
+.soon-row strong { font-weight: 700; margin-right: 4px; }
+.soon-row span { padding: 5px 12px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); color: var(--ink-soft); font-weight: 500; }
 
 /* ============================================================
    12. FAQ
@@ -645,56 +703,81 @@ section { position: relative; }
 .faq-answer { padding: 0 22px 20px; color: var(--ink-soft); font-size: .9rem; line-height: 1.65; }
 
 /* ============================================================
-   13. NOTIFY ME
+   13. FREE DEMO
    ============================================================ */
-.notify { padding-block: clamp(80px, 10vw, 130px); }
-.notify-card {
+.demo { padding-block: clamp(80px, 10vw, 130px); }
+.demo-card {
   position: relative; overflow: hidden;
-  max-width: 780px; margin-inline: auto; text-align: center;
+  display: grid; grid-template-columns: 1fr minmax(0, 440px); gap: clamp(28px, 5vw, 56px); align-items: center;
   border-radius: var(--radius-xl);
-  padding: clamp(40px, 6vw, 64px) clamp(24px, 6vw, 60px);
+  padding: clamp(28px, 5vw, 56px);
   background: linear-gradient(135deg, var(--primary-700), var(--primary) 55%, var(--secondary-700));
   color: #fff; box-shadow: var(--shadow-3);
 }
-.notify-card::before {
+.demo-card::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 45%), radial-gradient(circle at 85% 80%, rgba(255,179,0,.25), transparent 40%);
 }
-.notify-card > * { position: relative; }
-.notify-card h2 { font-size: var(--fs-h2); font-weight: 800; text-wrap: balance; }
-.notify-card p { margin-top: 12px; opacity: .92; font-size: var(--fs-lead); }
-.notify-form { margin-top: 30px; display: flex; gap: 10px; max-width: 460px; margin-inline: auto; flex-wrap: wrap; }
-.notify-form input {
-  flex: 1 1 240px; min-width: 0;
-  padding: 15px 18px; border-radius: var(--radius-sm); border: 1.5px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.12); color: #fff; font-family: var(--font); font-size: .95rem;
-  backdrop-filter: blur(6px);
-}
-.notify-form input::placeholder { color: rgba(255,255,255,.72); }
-.notify-form input:focus { outline: none; border-color: #fff; background: rgba(255,255,255,.18); }
-.notify-form button {
-  background: #fff; color: var(--primary-700); font-weight: 700; padding: 15px 24px; border-radius: var(--radius-sm); border: none; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 6px; transition: transform .2s ease;
-}
-.notify-form button:hover { transform: translateY(-2px); }
-.notify-error { margin-top: 10px; font-size: .82rem; color: #FFE0B2; min-height: 1.2em; }
-.notify-note { margin-top: 14px; font-size: .78rem; opacity: .75; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.demo-card > * { position: relative; }
+.demo-copy h2 { font-size: var(--fs-h2); font-weight: 800; line-height: 1.15; text-wrap: balance; }
+.demo-copy > p { margin-top: 12px; opacity: .92; font-size: var(--fs-lead); line-height: 1.6; }
+.demo-points { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+.demo-points li { display: flex; align-items: center; gap: 10px; font-size: .95rem; font-weight: 500; }
+.demo-points .material-symbols-outlined { color: var(--accent); }
 
-/* snackbar */
-.snackbar {
-  position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 30px);
-  background: var(--ink); color: var(--bg); padding: 14px 22px; border-radius: var(--radius-sm);
-  display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 500;
-  box-shadow: var(--shadow-3); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; z-index: 200;
+.demo-form {
+  background: var(--card); color: var(--ink);
+  border-radius: var(--radius-lg); padding: clamp(20px, 3vw, 28px);
+  box-shadow: var(--shadow-3);
 }
-[data-theme="dark"] .snackbar { background: var(--bg-elevated); color: var(--ink); border: 1px solid var(--border); }
-.snackbar.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
-.snackbar .material-symbols-outlined { color: var(--secondary); }
+.demo-form h3 { font-size: 1.35rem; font-weight: 800; letter-spacing: -.01em; }
+.demo-form .demo-sub { margin-top: 4px; font-size: .88rem; color: var(--ink-soft); }
+.field { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field label { font-size: .84rem; font-weight: 600; }
+.field label .optional { font-weight: 400; color: var(--ink-faint); }
+.field input, .field select {
+  width: 100%; min-width: 0;
+  padding: 13px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+  background: var(--bg-elevated); color: var(--ink); font-family: var(--font); font-size: .95rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.field input::placeholder { color: var(--ink-faint); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-100); }
+.field.has-error input, .field.has-error select { border-color: var(--danger); }
+.field-error { font-size: .76rem; color: var(--danger); }
+.field-error:empty { display: none; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.consent { margin-top: 18px; }
+.consent label { display: flex; align-items: flex-start; gap: 10px; font-size: .82rem; line-height: 1.5; color: var(--ink-soft); cursor: pointer; }
+.consent input { width: 18px; height: 18px; margin: 1px 0 0; flex-shrink: 0; accent-color: var(--primary); cursor: pointer; }
+.consent a { color: var(--info-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.consent .field-error { margin-top: 6px; padding-left: 28px; }
+
+.demo-submit {
+  width: 100%; margin-top: 18px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--accent); color: #0F1B2D; font-weight: 700; font-size: 1rem;
+  padding: 15px 24px; border-radius: var(--radius-sm); border: none; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.demo-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(255,179,0,.7); }
+.demo-submit[disabled] { opacity: .7; cursor: progress; transform: none; box-shadow: none; }
+
+.form-status { display: none; margin-top: 14px; padding: 12px 14px; border-radius: var(--radius-sm); font-size: .86rem; line-height: 1.5; font-weight: 500; align-items: flex-start; gap: 8px; }
+.form-status.show { display: flex; }
+.form-status .material-symbols-outlined { flex-shrink: 0; }
+.form-status.is-success { background: rgba(0,200,83,.12); color: var(--success-ink); }
+.form-status.is-info { background: var(--primary-100); color: var(--info-ink); }
+.form-status.is-error { background: rgba(211,47,47,.12); color: var(--danger); }
+
+.demo-note { margin-top: 14px; text-align: center; font-size: .78rem; color: var(--ink-faint); }
 
 /* ============================================================
    14. FOOTER
    ============================================================ */
 .footer { padding-block: 60px 30px; border-top: 1px solid var(--border); }
+.mobile-cta { display: none; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; }
 .footer-brand p { margin-top: 12px; color: var(--ink-faint); font-size: .88rem; max-width: 30ch; line-height: 1.6; }
 .footer-col h5 { font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); margin-bottom: 14px; }
@@ -717,6 +800,8 @@ section { position: relative; }
   .feat-card, .feat-card.core, .feat-card.support { grid-column: span 2; }
   .screens-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .demo-card { grid-template-columns: 1fr; }
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 620px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -724,6 +809,20 @@ section { position: relative; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { width: 100%; }
+  .shop-grid, .steps-grid { grid-template-columns: 1fr; }
+  .price-cta { width: 100%; justify-content: center; }
+  /* the sticky bar below carries the Free Demo button on phones */
+  .nav-cta { display: none; }
+  .mobile-cta {
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 90;
+    display: flex; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: var(--nav-bg); backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-top: 1px solid var(--border);
+  }
+  .mobile-cta a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border-radius: var(--radius-sm); font-weight: 700; font-size: .95rem; }
+  .mobile-cta-call { flex: 0 0 auto; background: var(--bg-elevated); border: 1.5px solid var(--border); color: var(--ink); }
+  .mobile-cta-demo { flex: 1; background: var(--accent); color: #0F1B2D; }
+  .footer { padding-bottom: 96px; }
 }
 </style>
 </head>
@@ -744,16 +843,18 @@ section { position: relative; }
       <a href="#features">Features</a>
       <a href="#industries">Industries</a>
       <a href="#why">Why Us</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
 
     <div class="nav-actions">
+      <a href="tel:+918235914547" class="nav-phone"><span class="material-symbols-outlined" aria-hidden="true">call</span><span>Sales: <span translate="no">82359 14547</span></span></a>
+      <button class="lang-btn" id="lang-toggle" type="button" aria-label="भाषा बदलें / Change language"><span data-no-i18n>हिंदी</span></button>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
         <span class="material-symbols-outlined icon-light" aria-hidden="true">dark_mode</span>
         <span class="material-symbols-outlined icon-dark" aria-hidden="true">light_mode</span>
       </button>
-      <a href="#notify" class="btn btn-primary btn-sm">Notify Me</a>
+      <a href="#demo" class="btn btn-primary btn-sm nav-cta">Free Demo</a>
       <button class="icon-btn nav-burger" id="burger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>
@@ -765,9 +866,10 @@ section { position: relative; }
   <a href="#features">Features</a>
   <a href="#industries">Industries</a>
   <a href="#why">Why Us</a>
-  <a href="#roadmap">Roadmap</a>
+  <a href="#pricing">Pricing</a>
   <a href="#faq">FAQ</a>
-  <a href="#notify" class="btn btn-primary mt-20">Notify Me</a>
+  <a href="tel:+918235914547">Sales: <span translate="no">82359 14547</span></a>
+  <a href="#demo" class="btn btn-primary mt-20">Free Demo</a>
 </div>
 
 <main id="main">
@@ -783,24 +885,24 @@ section { position: relative; }
     </div>
     <div class="container hero-grid">
       <div class="hero-copy reveal is-visible">
-        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>Launching Soon in India</span>
-        <h1>India's <span class="accent-word">Next Generation</span> Billing &amp; Inventory Platform</h1>
-        <p class="lead">BillVexa is a modern GST-ready billing, POS, inventory, and business management platform built specifically for Indian retailers, wholesalers, and SMEs.</p>
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>14-day free trial · Free setup · No card needed</span>
+        <h1 data-i18n-html="hero.title">India's <span class="accent-word">Next Generation</span> GST billing and complete stock accounts, in one software</h1>
+        <p class="lead">Furniture, electronics, mobile shop or wholesale — scan the barcode and the GST bill is ready. CGST, SGST and IGST are worked out automatically.</p>
+        <ul class="hero-points">
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><span>Stock updates automatically on every sale and purchase</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><span>GSTR-1 and HSN summary — send it straight to your CA</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><span>Unlimited products, inventory and bills</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span><span>Staff salary and payroll included</span></li>
+        </ul>
         <div class="hero-actions">
-          <a href="#notify" class="btn btn-primary" data-ripple>
-            <span class="material-symbols-outlined" aria-hidden="true">notifications_active</span>
-            Notify Me
+          <a href="#demo" class="btn btn-primary" data-ripple>
+            <span class="material-symbols-outlined" aria-hidden="true">event_available</span>
+            Free Demo
           </a>
-          <a href="#roadmap" class="btn btn-ghost" data-ripple>
-            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-            Coming Soon
+          <a href="#pricing" class="btn btn-ghost" data-ripple>
+            <span class="material-symbols-outlined" aria-hidden="true">sell</span>
+            See Pricing
           </a>
-        </div>
-        <div class="hero-trust">
-          <div class="trust-avatars" aria-hidden="true">
-            <span>KM</span><span>RS</span><span>AP</span><span>SN</span>
-          </div>
-          <small>Trusted early access by 200+ Indian retailers on the waitlist</small>
         </div>
       </div>
 
@@ -889,7 +991,7 @@ section { position: relative; }
             <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>GST Ready Invoices</span>
             <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Fast Checkout</span>
             <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Barcode Billing</span>
-            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Thermal Printing</span>
+            <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Split Payments</span>
             <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>UPI Payments</span>
             <span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>B2B &amp; B2C Billing</span>
           </div>
@@ -922,9 +1024,9 @@ section { position: relative; }
         <article class="feat-card support">
           <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div>
           <h3>Purchase Management</h3>
-          <p class="desc">From order to shelf, fully tracked.</p>
+          <p class="desc">From order to shelf — and who you owe, and when.</p>
           <div class="feat-tags">
-            <span>Purchase Orders</span><span>Supplier Management</span><span>Goods Receiving</span><span>Purchase History</span><span>Cost Tracking</span><span>Price Updates</span>
+            <span>Purchase Orders</span><span>Supplier Management</span><span>Goods Receiving</span><span>Cost Tracking</span><span>Outstanding Bills</span><span>Payment Tracking</span>
           </div>
         </article>
 
@@ -942,16 +1044,7 @@ section { position: relative; }
           <h3>Customer Management</h3>
           <p class="desc">Turn one-time buyers into regulars.</p>
           <div class="feat-tags">
-            <span>Customer Profiles</span><span>Loyalty</span><span>Credit Accounts</span><span>Purchase History</span><span>WhatsApp Bills</span>
-          </div>
-        </article>
-
-        <article class="feat-card support">
-          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span></div>
-          <h3>Supplier Management</h3>
-          <p class="desc">Know who you owe, and when it's due.</p>
-          <div class="feat-tags">
-            <span>Vendor Profiles</span><span>Outstanding Bills</span><span>Purchase Analytics</span><span>Payment Tracking</span>
+            <span>Customer Profiles</span><span>Loyalty</span><span>Credit Accounts</span><span>Purchase History</span>
           </div>
         </article>
 
@@ -974,11 +1067,11 @@ section { position: relative; }
         </article>
 
         <article class="feat-card support">
-          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">store</span></div>
-          <h3>Multi Business</h3>
-          <p class="desc">One login, every branch.</p>
+          <div class="feat-icon"><span class="material-symbols-outlined" aria-hidden="true">badge</span></div>
+          <h3>Staff Management</h3>
+          <p class="desc">Roles, PIN login and payroll in one place.</p>
           <div class="feat-tags">
-            <span>Multiple Shops</span><span>Role Management</span><span>Employee Permissions</span><span>Owner Dashboard</span><span>Cloud Sync</span>
+            <span>Staff Roles</span><span>PIN Login</span><span>Permissions</span><span>Salary &amp; Advances</span><span>Monthly Payroll</span><span>Payroll Reports</span>
           </div>
         </article>
 
@@ -1000,61 +1093,96 @@ section { position: relative; }
   <section class="industries" id="industries" aria-label="Industries supported">
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">storefront</span>Built For Every Kind Of Shop</span>
-        <h2>Industries BillVexa Supports</h2>
-        <p>Whatever you sell, BillVexa adapts to how you sell it — batches, expiry, serials, or loose weight.</p>
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">storefront</span>Built Around Your Shop</span>
+        <h2>Made to fit the way your shop works</h2>
+        <p>Features you don't need can be switched off — your screen stays clean.</p>
+      </div>
+
+      <div class="shop-grid reveal-stagger">
+        <article class="shop-card">
+          <div class="shop-top"><span class="material-symbols-outlined" aria-hidden="true">chair</span><h3>Furniture</h3></div>
+          <p>Size, colour and finish variants — separate stock and rate for each. B2B bills with GSTIN for large orders.</p>
+        </article>
+        <article class="shop-card">
+          <div class="shop-top"><span class="material-symbols-outlined" aria-hidden="true">devices</span><h3>Electronics</h3></div>
+          <p>TV, fridge, AC — a serial number for every piece. Separate serials for an AC's indoor and outdoor units.</p>
+        </article>
+        <article class="shop-card">
+          <div class="shop-top"><span class="material-symbols-outlined" aria-hidden="true">smartphone</span><h3>Mobile Shop</h3></div>
+          <p>IMEI 1 and IMEI 2 tracking. Scan the IMEI and that exact phone goes on the bill — with its storage and colour variant.</p>
+        </article>
+        <article class="shop-card">
+          <div class="shop-top"><span class="material-symbols-outlined" aria-hidden="true">medical_services</span><h3>Medical / FMCG</h3><span class="mock-chip chip-amber">Coming soon</span></div>
+          <p>Batch number and expiry tracking, so the stock that expires first sells first. Alerts before expiry.</p>
+        </article>
       </div>
     </div>
 
     <div class="marquee-row" aria-hidden="true">
       <div class="marquee">
+        <!-- one set of chips, repeated 4x for a seamless loop on wide screens -->
         <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
         <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">medication</span>Medical Stores</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">checkroom</span>Garments</span>
         <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
         <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
         <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">edit_note</span>Stationery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
         <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
-        <!-- duplicate for seamless loop -->
         <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
         <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">medication</span>Medical Stores</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">checkroom</span>Garments</span>
         <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
         <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
         <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">edit_note</span>Stationery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
+        <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
+        <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">devices</span>Electronics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">chair</span>Furniture</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">shopping_bag</span>Footwear</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">spa</span>Cosmetics</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">hardware</span>Hardware</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
         <span class="industry-chip plus"><span class="material-symbols-outlined">apps</span>And more...</span>
       </div>
     </div>
 
     <div class="marquee-row reverse" aria-hidden="true">
       <div class="marquee">
+        <!-- one set of chips, repeated 4x for a seamless loop on wide screens -->
         <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
         <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">restaurant</span>Restaurants</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">local_cafe</span>Cafes</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">cake</span>Sweet Shops</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">diamond</span>Jewellery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy (coming soon)</span>
         <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
         <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
         <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
-        <!-- duplicate for seamless loop -->
+        <span class="industry-chip"><span class="material-symbols-outlined">local_laundry_service</span>Laundry Shops</span>
         <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
         <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">restaurant</span>Restaurants</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">local_cafe</span>Cafes</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">cake</span>Sweet Shops</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">smartphone</span>Mobile Shops</span>
-        <span class="industry-chip"><span class="material-symbols-outlined">diamond</span>Jewellery</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy (coming soon)</span>
         <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
         <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
         <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_laundry_service</span>Laundry Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy (coming soon)</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_laundry_service</span>Laundry Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">warehouse</span>Wholesalers</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_shipping</span>Distributors</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">medical_services</span>Pharmacy (coming soon)</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">directions_car</span>Automobile Parts</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">menu_book</span>Book Stores</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">redeem</span>Gift Shops</span>
+        <span class="industry-chip"><span class="material-symbols-outlined">local_laundry_service</span>Laundry Shops</span>
       </div>
     </div>
   </section>
@@ -1066,7 +1194,7 @@ section { position: relative; }
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">favorite</span>Why BillVexa</span>
-        <h2>Ten reasons shop owners are already waiting for us</h2>
+        <h2>Ten reasons to run your shop on BillVexa</h2>
         <p>Scroll sideways — this is the short version of everything above.</p>
       </div>
 
@@ -1092,8 +1220,8 @@ section { position: relative; }
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">preview</span>A First Look</span>
-        <h2>A glimpse of what's being built</h2>
-        <p>Actual product screens are still in design — here's the shape of what's coming.</p>
+        <h2>A glimpse of the main screens</h2>
+        <p>A simplified preview of where you'll spend your day — billing, stock, purchases and reports.</p>
       </div>
 
       <div class="screens-grid reveal-stagger">
@@ -1178,44 +1306,72 @@ section { position: relative; }
   </section>
 
   <!-- ============================================================
-       ROADMAP
+       HOW IT WORKS
        ============================================================ -->
-  <section class="roadmap" id="roadmap" aria-label="Roadmap">
+  <section class="steps" id="how" aria-label="How to get started">
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">route</span>Roadmap</span>
-        <h2>Where we are, and where we're headed</h2>
-        <p>Built in the open, one milestone at a time.</p>
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">route</span>Getting Started</span>
+        <h2>Get started in 3 easy steps</h2>
       </div>
 
-      <div class="road-line reveal">
-        <div class="road-step current">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">construction</span></span>
-          <div class="road-card">
-            <div class="road-top"><h4>Development</h4><span class="road-badge">You are here — Now</span></div>
-            <p>Core billing, inventory, and GST engine are being built and tested.</p>
+      <div class="steps-grid reveal-stagger">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Fill the form</h3>
+          <p>Give us your name and number and we'll call you.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Free setup</h3>
+          <p>Our team creates your shop's account and switches on the features you need.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Run it free for 14 days</h3>
+          <p>Continue if you like it. No card needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING
+       ============================================================ -->
+  <section class="pricing" id="pricing" aria-label="Pricing">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">sell</span>Everything In One Plan</span>
+        <h2>One plan. Everything included.</h2>
+        <p>From making the bill to paying staff salaries — every job in the shop, one software.</p>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-main">
+          <div class="price-top">
+            <span class="price-plan">Growth Plan</span>
+            <span class="price-offer">First 10 shops · 40% off</span>
           </div>
+          <div class="price-amount">
+            <span class="price-now" translate="no">₹1,499</span>
+            <span class="price-was" translate="no">₹2,499</span>
+            <span class="price-per">/ month</span>
+          </div>
+          <ul class="price-points">
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited products</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited inventory</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited bills / invoices</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Data kept safe for 3 years</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Staff payroll</span></li>
+          </ul>
+          <p class="price-note">14-day free trial · No card needed · Free setup</p>
         </div>
-        <div class="road-step">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">science</span></span>
-          <div class="road-card"><h4>Beta Launch</h4><p>Early access opens to waitlisted shops for real-world testing.</p></div>
-        </div>
-        <div class="road-step">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">flag</span></span>
-          <div class="road-card"><h4>Public Release</h4><p>BillVexa opens up to every retailer, wholesaler, and SME in India.</p></div>
-        </div>
-        <div class="road-step">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">smartphone</span></span>
-          <div class="road-card"><h4>Mobile Apps</h4><p>Native Android and iOS apps for billing on the move.</p></div>
-        </div>
-        <div class="road-step">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></span>
-          <div class="road-card"><h4>AI Insights</h4><p>Smart reorder suggestions, demand forecasting, and anomaly alerts.</p></div>
-        </div>
-        <div class="road-step">
-          <span class="road-dot"><span class="material-symbols-outlined" aria-hidden="true">corporate_fare</span></span>
-          <div class="road-card"><h4>Enterprise Features</h4><p>Advanced multi-branch controls, SSO, and custom integrations.</p></div>
-        </div>
+        <a href="#demo" class="price-cta" data-ripple>Book a Free Demo<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      </div>
+
+      <div class="soon-row reveal">
+        <strong>Coming soon:</strong>
+        <span>Android app</span><span>Thermal printer</span><span>Bills on WhatsApp</span><span>Credit (udhaar) collection</span><span>Barcode label printing</span><span>E-way bill</span>
       </div>
     </div>
   </section>
@@ -1231,56 +1387,141 @@ section { position: relative; }
       </div>
 
       <div class="faq-list reveal">
-        <details class="faq-item">
-          <summary>What is BillVexa?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">BillVexa is a cloud-based billing, POS, and inventory management platform built for Indian retailers, wholesalers, and small-to-medium businesses — covering GST invoicing, stock control, purchases, and reporting in one place.</div>
+        <details class="faq-item" open>
+          <summary><span>Do I need to buy a new computer?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">No. BillVexa runs in the browser, on whatever computer, laptop or mobile you already have. If you want to use a barcode scanner, a USB or Bluetooth one will work.</div>
         </details>
         <details class="faq-item">
-          <summary>Who is it for?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Kirana stores, supermarkets, pharmacies, electronics shops, garment stores, wholesalers, distributors, restaurants, and pretty much any Indian business that bills customers and tracks stock.</div>
+          <summary><span>Will I get reports for GST returns?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Yes. The GSTR-1 and HSN summary can be downloaded as JSON and Excel and sent straight to your CA.</div>
         </details>
         <details class="faq-item">
-          <summary>When will it launch?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">We're actively in development. Join the waitlist below and you'll be the first to know when beta access opens.</div>
+          <summary><span>Is there a limit on products or bills?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">No. Products, inventory and bills are all unlimited.</div>
         </details>
         <details class="faq-item">
-          <summary>Will there be mobile apps?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Yes. Native Android and iOS apps are on the roadmap, right after public release, so you can bill and check stock from anywhere.</div>
+          <summary><span>How long is my data kept?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Your data is kept safe for 3 years.</div>
         </details>
         <details class="faq-item">
-          <summary>Does it support GST?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Fully. CGST, SGST, and IGST are calculated automatically, with HSN-based rates and filing-ready GST reports built in from day one.</div>
+          <summary><span>Can I manage staff salaries too?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Yes. Salary, advances, payments and the monthly payroll are built in, with reports.</div>
         </details>
         <details class="faq-item">
-          <summary>Can I migrate from Tally?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Migration tools for moving your product catalog, customers, and opening stock from Tally and similar software are planned as part of onboarding.</div>
+          <summary><span>Can my staff make bills?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login.</div>
         </details>
         <details class="faq-item">
-          <summary>Does it work offline?<span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">BillVexa is cloud-first. Limited offline billing with automatic sync once you're back online is on our roadmap for a future update.</div>
+          <summary><span>What happens after the free trial?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">If you like it, you continue on the Growth plan. We don't take card details for the trial, so nothing is charged automatically.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Is internet required?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+          <div class="faq-answer">Yes. BillVexa runs in the browser, so you need an internet connection to use it.</div>
         </details>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       NOTIFY ME
+       FREE DEMO
        ============================================================ -->
-  <section class="notify" id="notify" aria-label="Get notified at launch">
+  <section class="demo" id="demo" aria-label="Book a free demo">
     <div class="container">
-      <div class="notify-card reveal">
-        <h2>Be first through the door</h2>
-        <p>Leave your email and we'll let you know the moment BillVexa opens for early access — no spam, just the launch update.</p>
-        <form class="notify-form" id="notify-form" novalidate>
-          <label for="notify-email" class="visually-hidden">Email address</label>
-          <input type="email" id="notify-email" name="email" placeholder="you@yourshop.com" autocomplete="email" required />
-          <button type="submit" data-ripple>
-            Notify Me
-            <span class="material-symbols-outlined" aria-hidden="true">north_east</span>
+      <div class="demo-card reveal">
+        <div class="demo-copy">
+          <h2>See BillVexa in action</h2>
+          <p>Tell us a little about your shop and our team will call you, show you the product, and help you get set up.</p>
+          <ul class="demo-points">
+            <li><span class="material-symbols-outlined" aria-hidden="true">call</span>A personal call from our team</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">storefront</span>A walkthrough built around your business</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">handshake</span>Help setting up your shop</li>
+          </ul>
+        </div>
+
+        <form class="demo-form" id="demo-form" novalidate>
+          <h3>Book a Free Demo</h3>
+          <p class="demo-sub">Our team will call you and set up your shop</p>
+
+          <div class="field">
+            <label for="demo-name">Your Name</label>
+            <input type="text" id="demo-name" name="name" placeholder="e.g. Rakesh Kumar" autocomplete="name" maxlength="150" required aria-describedby="demo-name-error" />
+            <div class="field-error" data-no-i18n id="demo-name-error" role="alert"></div>
+          </div>
+
+          <div class="field">
+            <label for="demo-phone">Mobile Number</label>
+            <input type="tel" id="demo-phone" name="phone" placeholder="10-digit number" autocomplete="tel-national" inputmode="numeric" required aria-describedby="demo-phone-error" />
+            <div class="field-error" data-no-i18n id="demo-phone-error" role="alert"></div>
+          </div>
+
+          <div class="field">
+            <label for="demo-email">Email <span class="optional">(optional)</span></label>
+            <input type="email" id="demo-email" name="email" placeholder="e.g. shop@gmail.com" autocomplete="email" maxlength="255" aria-describedby="demo-email-error" />
+            <div class="field-error" data-no-i18n id="demo-email-error" role="alert"></div>
+          </div>
+
+          <div class="field">
+            <label for="demo-shop">Shop Name</label>
+            <input type="text" id="demo-shop" name="shopName" placeholder="e.g. Shree Ganesh Stores" autocomplete="organization" maxlength="200" required aria-describedby="demo-shop-error" />
+            <div class="field-error" data-no-i18n id="demo-shop-error" role="alert"></div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="demo-city">City</label>
+              <input type="text" id="demo-city" name="city" placeholder="City" autocomplete="address-level2" maxlength="100" required aria-describedby="demo-city-error" />
+              <div class="field-error" data-no-i18n id="demo-city-error" role="alert"></div>
+            </div>
+            <div class="field">
+              <label for="demo-business">Business</label>
+              <select id="demo-business" name="businessType" required aria-describedby="demo-business-error">
+                <option value="">Select</option>
+                <option value="kirana">Kirana / Grocery</option>
+                <option value="electronics">Electronics</option>
+                <option value="furniture">Furniture</option>
+                <option value="footwear">Footwear</option>
+                <option value="cosmetics">Cosmetics</option>
+                <option value="hardware">Hardware</option>
+                <option value="books">Book Store</option>
+                <option value="mobile">Mobile Shop</option>
+                <option value="auto_parts">Automobile Parts</option>
+                <option value="gifts">Gift Shop</option>
+                <option value="laundry">Laundry Shop</option>
+                <option value="wholesale">Wholesale / Distribution</option>
+                <option value="pharmacy">Pharmacy (coming soon)</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="field-error" data-no-i18n id="demo-business-error" role="alert"></div>
+            </div>
+          </div>
+
+          <!-- Honeypot: hidden from people, filled in by naive bots. -->
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="demo-website">Leave this field empty</label>
+            <input type="text" id="demo-website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="consent">
+            <label for="demo-consent">
+              <input type="checkbox" id="demo-consent" name="acceptedTerms" required aria-describedby="demo-consent-error" />
+              <span data-i18n-html="demo.consent">I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and to being contacted about my demo.</span>
+            </label>
+            <div class="field-error" data-no-i18n id="demo-consent-error" role="alert"></div>
+          </div>
+
+          <button type="submit" class="demo-submit" id="demo-submit">
+            <span id="demo-submit-label" data-no-i18n>Get Free Demo</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </button>
+
+          <div class="form-status" id="demo-status" role="status" aria-live="polite">
+            <span class="material-symbols-outlined" id="demo-status-icon" aria-hidden="true">check_circle</span>
+            <span id="demo-status-text" data-no-i18n></span>
+          </div>
+
+          <p class="demo-note">No charges · No card needed · Just 30 seconds</p>
         </form>
-        <div class="notify-error" id="notify-error" role="alert"></div>
-        <div class="notify-note"><span class="material-symbols-outlined" aria-hidden="true">lock</span>We respect your inbox. Unsubscribe anytime.</div>
       </div>
     </div>
   </section>
@@ -1298,14 +1539,14 @@ section { position: relative; }
           <span class="brand-mark" aria-hidden="true">BV</span>
           BillVexa
         </a>
-        <p>Made for Indian Businesses. GST-ready billing, inventory, and business management — coming soon.</p>
+        <p>Made for Indian businesses. GST-ready billing, inventory, and business management.</p>
       </div>
       <div class="footer-col">
         <h5>Product</h5>
         <ul>
           <li><a href="#features">Features</a></li>
           <li><a href="#industries">Industries</a></li>
-          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#pricing">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1314,19 +1555,20 @@ section { position: relative; }
           <li><a href="#why">Why Us</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="mailto:hello@billvexa.in">Contact</a></li>
+          <li><a href="tel:+918235914547">Sales: <span translate="no">82359 14547</span></a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Legal</h5>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Get Started</h5>
         <ul>
-          <li><a href="#notify">Join Waitlist</a></li>
+          <li><a href="#demo">Book a Free Demo</a></li>
         </ul>
       </div>
     </div>
@@ -1342,9 +1584,10 @@ section { position: relative; }
   </div>
 </footer>
 
-<div class="snackbar" id="snackbar" role="status" aria-live="polite">
-  <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
-  <span id="snackbar-text">You're on the list! We'll email you at launch.</span>
+<!-- Sticky call-to-action bar (phones only) -->
+<div class="mobile-cta" id="mobile-cta">
+  <a href="tel:+918235914547" class="mobile-cta-call"><span class="material-symbols-outlined" aria-hidden="true">call</span><span>Call Us</span></a>
+  <a href="#demo" class="mobile-cta-demo"><span>Book a Free Demo</span></a>
 </div>
 
 <script>
@@ -1366,6 +1609,355 @@ section { position: relative; }
     var next = current === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     localStorage.setItem('billvexa-theme', next);
+  });
+
+  /* ---------- Language (English / हिंदी) ----------
+     The page is written in English. Hindi is applied on top of it from the
+     HI dictionary below, keyed by the exact English text — so a new English
+     string stays English until a Hindi line is added for it here. Elements
+     with inline markup (links, coloured words) use data-i18n-html + HI_HTML.
+     Brand names, numbers and anything marked translate="no" are left alone. */
+  var HI = {
+    "Skip to content": "सीधे कंटेंट पर जाएं",
+    "Features": "फ़ीचर",
+    "Industries": "बिज़नेस",
+    "Why Us": "हम क्यों",
+    "Pricing": "कीमत",
+    "FAQ": "सवाल-जवाब",
+    "Sales:": "सेल्स:",
+    "Free Demo": "फ्री डेमो",
+    "Call Us": "कॉल करें",
+    "BillVexa home": "BillVexa होम",
+    "Primary": "मुख्य मेन्यू",
+    "Toggle dark mode": "डार्क मोड बदलें",
+    "Open menu": "मेन्यू खोलें",
+    "Introduction": "परिचय",
+    "Platform highlights": "मुख्य बातें",
+    "Industries supported": "किन बिज़नेस के लिए",
+    "Product preview": "प्रोडक्ट की झलक",
+    "How to get started": "शुरू कैसे करें",
+    "Frequently asked questions": "अक्सर पूछे जाने वाले सवाल",
+    "Book a free demo": "फ्री डेमो बुक करें",
+    "BillVexa on X": "X पर BillVexa",
+    "BillVexa on LinkedIn": "LinkedIn पर BillVexa",
+    "Email BillVexa": "BillVexa को ईमेल करें",
+    "14-day free trial · Free setup · No card needed": "14 दिन फ्री ट्रायल · फ्री सेटअप · कोई कार्ड नहीं",
+    "Furniture, electronics, mobile shop or wholesale — scan the barcode and the GST bill is ready. CGST, SGST and IGST are worked out automatically.": "फ़र्नीचर, इलेक्ट्रॉनिक्स, मोबाइल शॉप या होलसेल — बारकोड स्कैन करो, GST बिल तैयार। CGST, SGST, IGST अपने आप।",
+    "Stock updates automatically on every sale and purchase": "हर बिक्री और खरीद पर स्टॉक अपने आप अपडेट",
+    "GSTR-1 and HSN summary — send it straight to your CA": "GSTR-1 और HSN समरी — CA को सीधा भेजें",
+    "Unlimited products, inventory and bills": "अनलिमिटेड प्रोडक्ट, इन्वेंटरी और बिल",
+    "Staff salary and payroll included": "स्टाफ़ की सैलरी और पेरोल भी इसी में",
+    "See Pricing": "कीमत देखें",
+    "Tax Invoice": "टैक्स इनवॉइस",
+    "GST READY": "GST तैयार",
+    "Smartphone 128GB": "स्मार्टफ़ोन 128GB",
+    "Induction Cooktop": "इंडक्शन कुकटॉप",
+    "Total": "कुल",
+    "Monthly Growth": "महीने की बढ़त",
+    "Live Stock": "लाइव स्टॉक",
+    "Refrigerator 190L": "फ्रिज 190L",
+    "Payment": "पेमेंट",
+    "UPI Received": "UPI मिल गया",
+    "GST Ready": "GST तैयार",
+    "Cloud Access": "क्लाउड एक्सेस",
+    "Unlimited": "अनलिमिटेड",
+    "Products": "प्रोडक्ट",
+    "Invoices": "इनवॉइस",
+    "Everything In One Place": "सब कुछ एक ही जगह",
+    "Built to run the whole shop — not just the till": "सिर्फ़ गल्ला नहीं — पूरी दुकान चलाने के लिए बना",
+    "From the counter to the balance sheet, every module is designed around how Indian retailers actually work — GST, batches, expiry dates, loose selling, and all.": "काउंटर से लेकर बैलेंस शीट तक, हर हिस्सा भारतीय दुकानदारों के काम के तरीके से बना है — GST, बैच, एक्सपायरी, खुला माल, सब कुछ।",
+    "Smart Billing": "स्मार्ट बिलिंग",
+    "Bill in seconds, stay compliant by default.": "सेकंडों में बिल, और GST के हिसाब से हमेशा पक्का।",
+    "GST Ready Invoices": "GST वाले इनवॉइस",
+    "Fast Checkout": "तेज़ चेकआउट",
+    "Barcode Billing": "बारकोड बिलिंग",
+    "Split Payments": "स्प्लिट पेमेंट",
+    "UPI Payments": "UPI पेमेंट",
+    "B2B & B2C Billing": "B2B और B2C बिलिंग",
+    "Inventory Management": "इन्वेंटरी मैनेजमेंट",
+    "Know exactly what's on every shelf, everywhere.": "हर शेल्फ़ पर क्या रखा है, हर जगह का पूरा पता।",
+    "Real-time Stock": "रियल-टाइम स्टॉक",
+    "Multi Warehouse": "कई गोदाम",
+    "Batch Tracking": "बैच ट्रैकिंग",
+    "Expiry Tracking": "एक्सपायरी ट्रैकिंग",
+    "Stock Alerts": "स्टॉक अलर्ट",
+    "Serial Number Tracking": "सीरियल नंबर ट्रैकिंग",
+    "Product Catalog": "प्रोडक्ट कैटलॉग",
+    "One catalog, every product type.": "एक कैटलॉग, हर तरह का प्रोडक्ट।",
+    "Unlimited Products": "अनलिमिटेड प्रोडक्ट",
+    "Variants": "वेरिएंट",
+    "Units": "यूनिट",
+    "Categories": "कैटेगरी",
+    "Brands": "ब्रांड",
+    "HSN Codes": "HSN कोड",
+    "Barcode Support": "बारकोड सपोर्ट",
+    "Purchase Management": "खरीद मैनेजमेंट",
+    "From order to shelf — and who you owe, and when.": "ऑर्डर से शेल्फ़ तक — और किसे कितना देना है, कब देना है।",
+    "Purchase Orders": "परचेज़ ऑर्डर",
+    "Supplier Management": "सप्लायर मैनेजमेंट",
+    "Goods Receiving": "माल की रिसीविंग",
+    "Purchase History": "खरीद का इतिहास",
+    "Cost Tracking": "लागत ट्रैकिंग",
+    "Sales Management": "बिक्री मैनेजमेंट",
+    "Every sale, return and rupee accounted for.": "हर बिक्री, वापसी और रुपये का हिसाब।",
+    "Sales Orders": "सेल्स ऑर्डर",
+    "Returns": "वापसी",
+    "Credit Notes": "क्रेडिट नोट",
+    "Customer Ledger": "ग्राहक खाता",
+    "Outstanding Payments": "बकाया पेमेंट",
+    "Daily Sales": "रोज़ की बिक्री",
+    "Customer Management": "ग्राहक मैनेजमेंट",
+    "Turn one-time buyers into regulars.": "एक बार के ग्राहक को पक्का ग्राहक बनाएं।",
+    "Customer Profiles": "ग्राहक प्रोफ़ाइल",
+    "Loyalty": "लॉयल्टी",
+    "Credit Accounts": "उधार खाते",
+    "Outstanding Bills": "बकाया बिल",
+    "Payment Tracking": "पेमेंट ट्रैकिंग",
+    "GST & Compliance": "GST और नियम",
+    "Filing-ready reports, always.": "रिटर्न भरने लायक रिपोर्ट, हमेशा तैयार।",
+    "GST Reports": "GST रिपोर्ट",
+    "HSN Reports": "HSN रिपोर्ट",
+    "Tax Summary": "टैक्स समरी",
+    "Invoice Export": "इनवॉइस एक्सपोर्ट",
+    "Analytics": "एनालिटिक्स",
+    "See the business, not just the bills.": "सिर्फ़ बिल नहीं, पूरा बिज़नेस देखें।",
+    "Revenue Dashboard": "कमाई का डैशबोर्ड",
+    "Top Products": "टॉप प्रोडक्ट",
+    "Profit Analysis": "मुनाफ़े का विश्लेषण",
+    "Business Reports": "बिज़नेस रिपोर्ट",
+    "Inventory Reports": "इन्वेंटरी रिपोर्ट",
+    "Tax Reports": "टैक्स रिपोर्ट",
+    "Staff Management": "स्टाफ़ मैनेजमेंट",
+    "Roles, PIN login and payroll in one place.": "रोल, PIN लॉगिन और पेरोल — सब एक जगह।",
+    "Staff Roles": "स्टाफ़ रोल",
+    "PIN Login": "PIN लॉगिन",
+    "Permissions": "परमिशन",
+    "Salary & Advances": "सैलरी और एडवांस",
+    "Monthly Payroll": "महीने का पेरोल",
+    "Payroll Reports": "पेरोल रिपोर्ट",
+    "Security": "सुरक्षा",
+    "Your data, locked down properly.": "आपका डेटा, पूरी तरह सुरक्षित।",
+    "Encrypted Data": "एन्क्रिप्टेड डेटा",
+    "Automatic Backups": "ऑटोमैटिक बैकअप",
+    "Role Based Access": "रोल के हिसाब से एक्सेस",
+    "Secure Authentication": "सुरक्षित लॉगिन",
+    "Audit Logs": "ऑडिट लॉग",
+    "Built Around Your Shop": "आपकी दुकान के हिसाब से",
+    "Made to fit the way your shop works": "जैसे आपकी दुकान चलती है, वैसा ही सॉफ़्टवेयर",
+    "Features you don't need can be switched off — your screen stays clean.": "जो फ़ीचर आपके काम का नहीं, उसे बंद कर दें — स्क्रीन साफ़ रहेगी।",
+    "Furniture": "फ़र्नीचर",
+    "Size, colour and finish variants — separate stock and rate for each. B2B bills with GSTIN for large orders.": "साइज़, कलर और फ़िनिश के वेरिएंट — हर वेरिएंट का अलग स्टॉक और रेट। बड़े ऑर्डर पर GSTIN वाला B2B बिल।",
+    "Electronics": "इलेक्ट्रॉनिक्स",
+    "TV, fridge, AC — a serial number for every piece. Separate serials for an AC's indoor and outdoor units.": "TV, फ्रिज, AC — हर पीस का सीरियल नंबर। AC की इनडोर-आउटडोर यूनिट दोनों का अलग सीरियल।",
+    "Mobile Shop": "मोबाइल शॉप",
+    "IMEI 1 and IMEI 2 tracking. Scan the IMEI and that exact phone goes on the bill — with its storage and colour variant.": "IMEI 1 और IMEI 2 ट्रैकिंग। IMEI स्कैन करो, वही फ़ोन बिल में — स्टोरेज/कलर वेरिएंट के साथ।",
+    "Medical / FMCG": "मेडिकल / FMCG",
+    "Coming soon": "जल्द आ रहा है",
+    "Batch number and expiry tracking, so the stock that expires first sells first. Alerts before expiry.": "बैच नंबर और एक्सपायरी ट्रैकिंग, पहले एक्सपायर होने वाला माल पहले बिके। एक्सपायरी से पहले अलर्ट।",
+    "Footwear": "फ़ुटवियर",
+    "Cosmetics": "कॉस्मेटिक्स",
+    "Hardware": "हार्डवेयर",
+    "Mobile Shops": "मोबाइल शॉप",
+    "And more...": "और भी बहुत कुछ...",
+    "Wholesalers": "होलसेलर",
+    "Distributors": "डिस्ट्रीब्यूटर",
+    "Pharmacy (coming soon)": "फ़ार्मेसी (जल्द आ रहा है)",
+    "Automobile Parts": "ऑटो पार्ट्स",
+    "Book Stores": "किताबों की दुकान",
+    "Gift Shops": "गिफ़्ट शॉप",
+    "Laundry Shops": "लॉन्ड्री शॉप",
+    "Laundry Shop": "लॉन्ड्री शॉप",
+    "Why BillVexa": "BillVexa क्यों",
+    "Ten reasons to run your shop on BillVexa": "अपनी दुकान BillVexa पर चलाने की दस वजहें",
+    "Scroll sideways — this is the short version of everything above.": "साइड में स्क्रॉल करें — ऊपर की सारी बातें, छोटे में।",
+    "Simple": "आसान",
+    "No training manuals. If you can use WhatsApp, you can use BillVexa.": "कोई ट्रेनिंग नहीं चाहिए। WhatsApp चला लेते हैं तो BillVexa भी चला लेंगे।",
+    "Fast": "तेज़",
+    "Bill a customer in under 10 seconds, even during peak hour rush.": "भीड़ के समय भी 10 सेकंड से कम में बिल।",
+    "Reliable": "भरोसेमंद",
+    "Built on infrastructure that doesn't go down when you need it most.": "ऐसे सिस्टम पर बना है जो ज़रूरत के वक़्त बंद नहीं होता।",
+    "Affordable": "किफ़ायती",
+    "Pricing designed for kirana margins, not enterprise budgets.": "कीमत छोटी दुकान के मार्जिन के हिसाब से, बड़ी कंपनियों के बजट के नहीं।",
+    "Cloud Based": "क्लाउड पर",
+    "Your data, synced and safe — accessible from any device, anywhere.": "आपका डेटा सिंक और सुरक्षित — किसी भी डिवाइस से, कहीं से भी।",
+    "Compliant invoices and filing-ready reports from day one.": "पहले दिन से GST वाले बिल और रिटर्न के लिए तैयार रिपोर्ट।",
+    "Made for India": "भारत के लिए बना",
+    "Loose selling, batches, expiry — built around how Indian shops actually run.": "खुला माल, बैच, एक्सपायरी — जैसे भारतीय दुकानें सच में चलती हैं।",
+    "Modern UI": "नया डिज़ाइन",
+    "A clean, fast interface your staff will actually enjoy using.": "साफ़ और तेज़ स्क्रीन, जो आपके स्टाफ़ को भी पसंद आएगी।",
+    "Powerful Reports": "दमदार रिपोर्ट",
+    "Know your best sellers, slow movers, and margins at a glance.": "सबसे ज़्यादा बिकने वाला माल, धीमा माल और मार्जिन — एक नज़र में।",
+    "Unlimited Growth": "बढ़ने की कोई सीमा नहीं",
+    "From one counter to multi-branch — BillVexa scales with you.": "एक काउंटर से कई ब्रांच तक — BillVexa आपके साथ बढ़ता है।",
+    "A First Look": "पहली झलक",
+    "A glimpse of the main screens": "मुख्य स्क्रीन की एक झलक",
+    "A simplified preview of where you'll spend your day — billing, stock, purchases and reports.": "जहाँ आपका दिन बीतेगा, उसकी एक आसान झलक — बिलिंग, स्टॉक, खरीद और रिपोर्ट।",
+    "POS Billing": "POS बिलिंग",
+    "Total ₹540": "कुल ₹540",
+    "Charge": "पेमेंट लें",
+    "POS Billing Screen": "POS बिलिंग स्क्रीन",
+    "Inventory": "इन्वेंटरी",
+    "Low Stock: 2 items": "कम स्टॉक: 2 आइटम",
+    "Reports": "रिपोर्ट",
+    "Revenue up 18% this month": "इस महीने कमाई 18% बढ़ी",
+    "Purchase Entry": "खरीद एंट्री",
+    "Pending": "बाकी",
+    "Received": "मिल गया",
+    "Purchase Screen": "खरीद स्क्रीन",
+    "Today": "आज",
+    "Orders": "ऑर्डर",
+    "Margin": "मार्जिन",
+    "Customers": "ग्राहक",
+    "Paid": "चुकता",
+    "₹850 Due": "₹850 बाकी",
+    "Getting Started": "शुरुआत",
+    "Get started in 3 easy steps": "3 आसान स्टेप में शुरू करें",
+    "Fill the form": "फ़ॉर्म भरें",
+    "Give us your name and number and we'll call you.": "नाम और नंबर दें, हम आपको कॉल करेंगे।",
+    "Free setup": "फ्री सेटअप",
+    "Our team creates your shop's account and switches on the features you need.": "हमारी टीम आपकी दुकान का अकाउंट बनाकर ज़रूरी फ़ीचर चालू कर देगी।",
+    "Run it free for 14 days": "14 दिन फ्री चलाएं",
+    "Continue if you like it. No card needed.": "पसंद आए तो जारी रखें, कोई कार्ड नहीं चाहिए।",
+    "Everything In One Plan": "सब कुछ एक ही प्लान में",
+    "One plan. Everything included.": "एक प्लान। सब कुछ शामिल।",
+    "From making the bill to paying staff salaries — every job in the shop, one software.": "बिल बनाने से लेकर स्टाफ़ की सैलरी तक — दुकान का हर काम, एक सॉफ़्टवेयर में।",
+    "Growth Plan": "Growth प्लान",
+    "First 10 shops · 40% off": "पहले 10 दुकानों के लिए · 40% OFF",
+    "/ month": "/ महीना",
+    "Unlimited products": "अनलिमिटेड प्रोडक्ट",
+    "Unlimited inventory": "अनलिमिटेड इन्वेंटरी",
+    "Unlimited bills / invoices": "अनलिमिटेड बिल / इनवॉइस",
+    "Data kept safe for 3 years": "3 साल तक डेटा सुरक्षित",
+    "Staff payroll": "स्टाफ़ पेरोल",
+    "14-day free trial · No card needed · Free setup": "14 दिन फ्री ट्रायल · कोई कार्ड नहीं · सेटअप फ्री",
+    "Book a Free Demo": "फ्री डेमो बुक करें",
+    "Coming soon:": "जल्द आ रहा है:",
+    "Android app": "Android ऐप",
+    "Thermal printer": "थर्मल प्रिंटर",
+    "Bills on WhatsApp": "WhatsApp पर सीधा बिल",
+    "Credit (udhaar) collection": "उधारी वसूली",
+    "Barcode label printing": "बारकोड लेबल प्रिंट",
+    "E-way bill": "E-way बिल",
+    "Questions": "सवाल",
+    "Frequently Asked Questions": "अक्सर पूछे जाने वाले सवाल",
+    "Do I need to buy a new computer?": "क्या मुझे नया कंप्यूटर खरीदना पड़ेगा?",
+    "No. BillVexa runs in the browser, on whatever computer, laptop or mobile you already have. If you want to use a barcode scanner, a USB or Bluetooth one will work.": "नहीं। BillVexa ब्राउज़र में चलता है — जो कंप्यूटर, लैपटॉप या मोबाइल आपके पास है, उसी पर। बारकोड स्कैनर लगाना चाहें तो USB या Bluetooth वाला चलेगा।",
+    "Will I get reports for GST returns?": "GST रिटर्न के लिए रिपोर्ट मिलेगी?",
+    "Yes. The GSTR-1 and HSN summary can be downloaded as JSON and Excel and sent straight to your CA.": "हाँ। GSTR-1 और HSN समरी JSON और Excel में डाउनलोड करके सीधे CA को भेज सकते हैं।",
+    "Is there a limit on products or bills?": "क्या प्रोडक्ट या बिल की कोई लिमिट है?",
+    "No. Products, inventory and bills are all unlimited.": "नहीं। प्रोडक्ट, इन्वेंटरी और बिल — सब अनलिमिटेड हैं।",
+    "How long is my data kept?": "मेरा डेटा कितने समय तक रहेगा?",
+    "Your data is kept safe for 3 years.": "आपका डेटा 3 साल तक सुरक्षित रहता है।",
+    "Can I manage staff salaries too?": "क्या स्टाफ़ की सैलरी भी मैनेज हो सकती है?",
+    "Yes. Salary, advances, payments and the monthly payroll are built in, with reports.": "हाँ। सैलरी, एडवांस, पेमेंट और महीने का पेरोल इसी में है, रिपोर्ट के साथ।",
+    "Can my staff make bills?": "क्या स्टाफ़ बिल बना सकता है?",
+    "Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login.": "हाँ। हर व्यक्ति को रोल दें — मालिक, मैनेजर, कैशियर या अकाउंटेंट — अलग-अलग परमिशन और PIN लॉगिन के साथ।",
+    "What happens after the free trial?": "फ्री ट्रायल के बाद क्या होगा?",
+    "If you like it, you continue on the Growth plan. We don't take card details for the trial, so nothing is charged automatically.": "पसंद आए तो Growth प्लान पर जारी रखें। ट्रायल के लिए हम कार्ड की जानकारी नहीं लेते, इसलिए अपने आप कोई पैसा नहीं कटता।",
+    "Is internet required?": "इंटरनेट ज़रूरी है?",
+    "Yes. BillVexa runs in the browser, so you need an internet connection to use it.": "हाँ। BillVexa ब्राउज़र में चलता है, इसलिए इसे चलाने के लिए इंटरनेट चाहिए।",
+    "See BillVexa in action": "BillVexa को चलता हुआ देखें",
+    "Tell us a little about your shop and our team will call you, show you the product, and help you get set up.": "अपनी दुकान के बारे में थोड़ा बताएं — हमारी टीम कॉल करेगी, प्रोडक्ट दिखाएगी और सेटअप में मदद करेगी।",
+    "A personal call from our team": "हमारी टीम की तरफ़ से सीधा कॉल",
+    "A walkthrough built around your business": "आपके बिज़नेस के हिसाब से पूरा डेमो",
+    "Help setting up your shop": "दुकान सेट करने में मदद",
+    "Our team will call you and set up your shop": "हमारी टीम कॉल करके आपकी दुकान सेट कर देगी",
+    "Your Name": "आपका नाम",
+    "Mobile Number": "मोबाइल नंबर",
+    "Email": "ईमेल",
+    "(optional)": "(वैकल्पिक)",
+    "Shop Name": "दुकान का नाम",
+    "City": "शहर",
+    "Business": "बिज़नेस",
+    "Select": "चुनें",
+    "Kirana / Grocery": "किराना / ग्रोसरी",
+    "Book Store": "किताबों की दुकान",
+    "Gift Shop": "गिफ़्ट शॉप",
+    "Wholesale / Distribution": "होलसेल / डिस्ट्रीब्यूशन",
+    "Other": "अन्य",
+    "Leave this field empty": "यह फ़ील्ड खाली छोड़ें",
+    "Get Free Demo": "फ्री डेमो पाएं",
+    "Submitting…": "भेजा जा रहा है…",
+    "No charges · No card needed · Just 30 seconds": "कोई चार्ज नहीं · कोई कार्ड नहीं · सिर्फ़ 30 सेकंड",
+    "e.g. Rakesh Kumar": "जैसे: राकेश कुमार",
+    "10-digit number": "10 अंकों का नंबर",
+    "e.g. shop@gmail.com": "जैसे: shop@gmail.com",
+    "e.g. Shree Ganesh Stores": "जैसे: श्री गणेश स्टोर्स",
+    "Please enter your name.": "कृपया अपना नाम लिखें।",
+    "Please enter a valid 10-digit mobile number.": "कृपया सही 10 अंकों का मोबाइल नंबर लिखें।",
+    "Please enter a valid email address.": "कृपया सही ईमेल लिखें।",
+    "Please enter your shop name.": "कृपया दुकान का नाम लिखें।",
+    "Please enter your city.": "कृपया अपना शहर लिखें।",
+    "Please select your business.": "कृपया अपना बिज़नेस चुनें।",
+    "Please accept the Terms of Service and Privacy Policy to continue.": "आगे बढ़ने के लिए कृपया सेवा की शर्तें और प्राइवेसी पॉलिसी स्वीकार करें।",
+    "Thank you! Your demo request has been received. Our team will call you shortly.": "धन्यवाद! आपकी डेमो रिक्वेस्ट मिल गई है। हमारी टीम जल्द ही आपको कॉल करेगी।",
+    "We already have your request. Our team will get back to you soon.": "आपकी रिक्वेस्ट हमारे पास पहले से है। हमारी टीम जल्द ही आपसे संपर्क करेगी।",
+    "Too many attempts. Please try again in a few minutes.": "बहुत ज़्यादा कोशिशें हो गईं। कृपया कुछ मिनट बाद फिर कोशिश करें।",
+    "Please check the details you entered and try again.": "कृपया भरी हुई जानकारी जाँचकर फिर कोशिश करें।",
+    "Something went wrong on our side. Please try again, or write to us at hello@billvexa.in.": "हमारी तरफ़ से कुछ गड़बड़ हो गई। कृपया फिर कोशिश करें, या hello@billvexa.in पर लिखें।",
+    "We couldn't reach our servers. Please check your connection and try again.": "सर्वर से संपर्क नहीं हो पाया। कृपया अपना इंटरनेट जाँचकर फिर कोशिश करें।",
+    "Made for Indian businesses. GST-ready billing, inventory, and business management.": "भारतीय बिज़नेस के लिए बना। GST वाली बिलिंग, इन्वेंटरी और बिज़नेस मैनेजमेंट।",
+    "Product": "प्रोडक्ट",
+    "Company": "कंपनी",
+    "Contact": "संपर्क",
+    "Legal": "कानूनी",
+    "Privacy Policy": "प्राइवेसी पॉलिसी",
+    "Terms of Service": "सेवा की शर्तें",
+    "Get Started": "शुरू करें",
+    "© 2026 BillVexa. All rights reserved.": "© 2026 BillVexa. सर्वाधिकार सुरक्षित।"
+  };
+  var HI_HTML = {
+    "hero.title": "भारत का <span class=\"accent-word\">नेक्स्ट जनरेशन</span> GST बिलिंग और स्टॉक का पूरा हिसाब, एक ही सॉफ़्टवेयर में",
+    "demo.consent": "मैं <a href=\"terms.html\" target=\"_blank\" rel=\"noopener\">सेवा की शर्तें</a> और <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">प्राइवेसी पॉलिसी</a> से सहमत हूँ, और डेमो के बारे में संपर्क किए जाने की अनुमति देता/देती हूँ।"
+  };
+  var HI_TITLE = 'BillVexa — GST बिलिंग और स्टॉक का पूरा हिसाब, एक ही सॉफ़्टवेयर में';
+  var EN_TITLE = document.title;
+  var LANG_ATTRS = ['placeholder', 'aria-label'];
+  var SKIP_SELECTOR = 'script, style, .material-symbols-outlined, [translate="no"], [data-no-i18n], [data-i18n-html]';
+  var lang = 'en';
+  var langToggle = document.getElementById('lang-toggle');
+  var langListeners = [];
+  var textEntries = [];   // { node, lead, text, trail }
+  var attrEntries = [];   // { el, attr, text }
+  var htmlEntries = [];   // { el, key, html }
+
+  function t(text) { return (lang === 'hi' && HI[text]) || text; }
+
+  (function collectTranslatables() {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var match = /^(\s*)([\s\S]*?)(\s*)$/.exec(node.nodeValue);
+      var text = match[2].replace(/\s+/g, ' ');
+      if (!text || !node.parentElement || node.parentElement.closest(SKIP_SELECTOR)) continue;
+      textEntries.push({ node: node, lead: match[1], text: text, trail: match[3] });
+    }
+    document.querySelectorAll('[placeholder], [aria-label]').forEach(function (el) {
+      if (el.closest('[data-no-i18n]')) return;
+      LANG_ATTRS.forEach(function (attr) {
+        if (el.hasAttribute(attr)) attrEntries.push({ el: el, attr: attr, text: el.getAttribute(attr) });
+      });
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      htmlEntries.push({ el: el, key: el.getAttribute('data-i18n-html'), html: el.innerHTML });
+    });
+  })();
+
+  function applyLanguage(next) {
+    lang = next === 'hi' ? 'hi' : 'en';
+    root.setAttribute('lang', lang === 'hi' ? 'hi-IN' : 'en-IN');
+    document.title = lang === 'hi' ? HI_TITLE : EN_TITLE;
+    textEntries.forEach(function (e) { e.node.nodeValue = e.lead + t(e.text) + e.trail; });
+    attrEntries.forEach(function (e) { e.el.setAttribute(e.attr, t(e.text)); });
+    htmlEntries.forEach(function (e) { e.el.innerHTML = (lang === 'hi' && HI_HTML[e.key]) || e.html; });
+    // The button always names the language you would switch TO.
+    langToggle.firstElementChild.textContent = lang === 'hi' ? 'English' : 'हिंदी';
+    langListeners.forEach(function (fn) { fn(); });
+  }
+
+  langToggle.addEventListener('click', function () {
+    applyLanguage(lang === 'hi' ? 'en' : 'hi');
+    try { localStorage.setItem('billvexa-lang', lang); } catch (err) { /* storage unavailable */ }
   });
 
   /* ---------- Sticky nav shadow on scroll ---------- */
@@ -1472,34 +2064,159 @@ section { position: relative; }
     });
   }
 
-  /* ---------- Notify form ---------- */
-  var form = document.getElementById('notify-form');
-  var emailInput = document.getElementById('notify-email');
-  var errorEl = document.getElementById('notify-error');
-  var snackbar = document.getElementById('snackbar');
+  /* ---------- Free Demo form ---------- */
+  // TODO: set the production endpoint here (the second URL). Locally the form
+  // talks to the API dev server; anywhere else it posts to the same origin.
+  var ENQUIRY_API_URL = location.hostname === 'localhost'
+    ? 'http://localhost:3000/api/v1/public/sales-enquiries'
+    : '/api/v1/public/sales-enquiries';
+
+  var form = document.getElementById('demo-form');
+  var submitBtn = document.getElementById('demo-submit');
+  var submitLabel = document.getElementById('demo-submit-label');
+  var statusEl = document.getElementById('demo-status');
+  var statusIcon = document.getElementById('demo-status-icon');
+  var statusText = document.getElementById('demo-status-text');
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var STATUS_ICONS = { success: 'check_circle', info: 'info', error: 'error' };
+
+  function normalisePhone(raw) {
+    var digits = raw.replace(/\D/g, '');
+    if (digits.length === 12 && digits.indexOf('91') === 0) return digits.slice(2);
+    if (digits.length === 11 && digits.charAt(0) === '0') return digits.slice(1);
+    return digits;
+  }
+
+  // name → validator returning an error message ('' = valid)
+  var validators = {
+    name: function (v) { return v ? '' : t('Please enter your name.'); },
+    phone: function (v) { return /^[6-9]\d{9}$/.test(normalisePhone(v)) ? '' : t('Please enter a valid 10-digit mobile number.'); },
+    email: function (v) { return !v || emailRegex.test(v) ? '' : t('Please enter a valid email address.'); },
+    shopName: function (v) { return v ? '' : t('Please enter your shop name.'); },
+    city: function (v) { return v ? '' : t('Please enter your city.'); },
+    businessType: function (v) { return v ? '' : t('Please select your business.'); }
+  };
+
+  function setFieldError(input, message) {
+    var errorEl = document.getElementById(input.getAttribute('aria-describedby'));
+    var field = input.closest('.field');
+    if (errorEl) errorEl.textContent = message;
+    if (field) field.classList.toggle('has-error', !!message);
+    if (message) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid');
+  }
+
+  function showStatus(kind, message) {
+    statusEl.className = 'form-status show is-' + kind;
+    statusIcon.textContent = STATUS_ICONS[kind];
+    statusText.textContent = message;
+  }
+  function clearStatus() { statusEl.className = 'form-status'; statusText.textContent = ''; }
+
+  function setSubmitting(isSubmitting) {
+    submitBtn.disabled = isSubmitting;
+    submitLabel.textContent = t(isSubmitting ? 'Submitting…' : 'Get Free Demo');
+  }
+
+  // Clear a field's error as soon as the visitor starts fixing it.
+  Array.prototype.forEach.call(form.elements, function (el) {
+    if (!el.name) return;
+    el.addEventListener(el.type === 'checkbox' || el.tagName === 'SELECT' ? 'change' : 'input', function () {
+      setFieldError(el, '');
+    });
+  });
+  // Digits only, capped at 10 — done here rather than with maxlength so a
+  // pasted "+91 98765 43210" is normalised instead of being cut short.
+  form.elements.phone.addEventListener('input', function () {
+    this.value = normalisePhone(this.value).slice(0, 10);
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var value = emailInput.value.trim();
-    if (!emailRegex.test(value)) {
-      errorEl.textContent = 'Please enter a valid email address.';
-      emailInput.focus();
+    clearStatus();
+
+    var firstInvalid = null;
+    Object.keys(validators).forEach(function (name) {
+      var input = form.elements[name];
+      var message = validators[name](input.value.trim());
+      setFieldError(input, message);
+      if (message && !firstInvalid) firstInvalid = input;
+    });
+    var consent = form.elements.acceptedTerms;
+    var consentMessage = consent.checked ? '' : t('Please accept the Terms of Service and Privacy Policy to continue.');
+    setFieldError(consent, consentMessage);
+    if (consentMessage && !firstInvalid) firstInvalid = consent;
+    if (firstInvalid) { firstInvalid.focus(); return; }
+
+    // Honeypot tripped — pretend it worked, send nothing.
+    if (form.elements.website.value) {
+      showStatus('success', t('Thank you! Your demo request has been received. Our team will call you shortly.'));
+      form.reset();
       return;
     }
-    errorEl.textContent = '';
-    try {
-      var list = JSON.parse(localStorage.getItem('billvexa-notify-emails') || '[]');
-      if (list.indexOf(value) === -1) list.push(value);
-      localStorage.setItem('billvexa-notify-emails', JSON.stringify(list));
-    } catch (err) { /* localStorage unavailable — safe to ignore, no backend anyway */ }
 
-    document.getElementById('snackbar-text').textContent = "You're on the list! We'll email " + value + ' at launch.';
-    snackbar.classList.add('show');
-    form.reset();
-    clearTimeout(window.__bvxSnackbarTimer);
-    window.__bvxSnackbarTimer = setTimeout(function () { snackbar.classList.remove('show'); }, 4200);
+    var params = new URLSearchParams(location.search);
+    var payload = {
+      name: form.elements.name.value.trim(),
+      phone: normalisePhone(form.elements.phone.value),
+      email: form.elements.email.value.trim(),
+      shopName: form.elements.shopName.value.trim(),
+      city: form.elements.city.value.trim(),
+      businessType: form.elements.businessType.value,
+      acceptedTerms: true,
+      source: 'coming_soon',
+      referrer: document.referrer.slice(0, 500),
+      utmSource: (params.get('utm_source') || '').slice(0, 100),
+      utmMedium: (params.get('utm_medium') || '').slice(0, 100),
+      utmCampaign: (params.get('utm_campaign') || '').slice(0, 100)
+    };
+
+    setSubmitting(true);
+    fetch(ENQUIRY_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        // Standard API envelope: { success, data | error, timestamp }
+        return res.json().catch(function () { return null; }).then(function (body) {
+          if (res.ok && body && body.success) {
+            // The API replies in English; the page shows its own wording so
+            // the message follows the visitor's chosen language.
+            var already = body.data && body.data.status === 'already_received';
+            showStatus(
+              already ? 'info' : 'success',
+              t(already
+                ? 'We already have your request. Our team will get back to you soon.'
+                : 'Thank you! Your demo request has been received. Our team will call you shortly.')
+            );
+            form.reset();
+          } else if (res.status === 429) {
+            showStatus('error', t('Too many attempts. Please try again in a few minutes.'));
+          } else if (res.status === 400) {
+            showStatus('error', (lang === 'en' && body && body.error && body.error.message) || t('Please check the details you entered and try again.'));
+          } else {
+            showStatus('error', t('Something went wrong on our side. Please try again, or write to us at hello@billvexa.in.'));
+          }
+        });
+      })
+      .catch(function () {
+        showStatus('error', t("We couldn't reach our servers. Please check your connection and try again."));
+      })
+      .then(function () { setSubmitting(false); });
   });
+
+  langListeners.push(function () {
+    setSubmitting(submitBtn.disabled);
+    clearStatus();
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (el.getAttribute('aria-describedby')) setFieldError(el, '');
+    });
+  });
+
+  /* ---------- Initial language: saved choice, else the browser's ---------- */
+  var savedLang = null;
+  try { savedLang = localStorage.getItem('billvexa-lang'); } catch (err) { /* storage unavailable */ }
+  if (savedLang === 'hi' || (!savedLang && /^hi\b/i.test(navigator.language || ''))) applyLanguage('hi');
 })();
 </script>
 </body>
