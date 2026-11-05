@@ -392,11 +392,6 @@ section { position: relative; }
 [data-theme="dark"] #theme-toggle .icon-light { display: none; }
 [data-theme="dark"] #theme-toggle .icon-dark { display: inline; }
 
-.nav-phone { display: none; align-items: center; gap: 6px; font-size: .88rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
-.nav-phone:hover { color: var(--primary); }
-.nav-phone .material-symbols-outlined { color: var(--primary); font-size: 1.1rem; }
-@media (min-width: 1180px) { .nav-phone { display: inline-flex; } }
-@media (min-width: 1180px) and (max-width: 1379px) { .nav-email { display: none; } }
 .lang-btn {
   height: 40px; padding: 0 14px; border-radius: 999px;
   background: var(--bg-elevated); border: 1px solid var(--border);
@@ -877,8 +872,6 @@ section { position: relative; }
     </nav>
 
     <div class="nav-actions">
-      <a href="tel:+918235914547" class="nav-phone"><span class="material-symbols-outlined" aria-hidden="true">call</span><span>Sales: <span translate="no">82359 14547</span></span></a>
-      <a href="mailto:sales@billvexa.in" class="nav-phone nav-email"><span class="material-symbols-outlined" aria-hidden="true">mail</span><span translate="no">sales@billvexa.in</span></a>
       <button class="lang-btn" id="lang-toggle" type="button" aria-label="भाषा बदलें / Change language"><span data-no-i18n>हिंदी</span></button>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
         <span class="material-symbols-outlined icon-light" aria-hidden="true">dark_mode</span>
