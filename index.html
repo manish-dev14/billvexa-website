@@ -82,7 +82,11 @@
   "publisher": {
     "@type": "Organization",
     "name": "BillVexa",
-    "url": "https://www.billvexa.in/"
+    "url": "https://www.billvexa.in/",
+    "sameAs": [
+      "https://www.linkedin.com/company/billvexa-in/",
+      "https://www.facebook.com/people/Billvexain/61592477337010/"
+    ]
   },
   "areaServed": "IN",
   "inLanguage": ["en-IN", "hi-IN"]
@@ -366,13 +370,7 @@ section { position: relative; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
 
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.18rem; letter-spacing: -.02em; }
-.brand-mark {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-weight: 800; font-size: .9rem;
-  box-shadow: var(--shadow-1);
-}
+.brand-mark { height: 34px; width: auto; display: block; }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a { font-size: .93rem; font-weight: 500; color: var(--ink-soft); transition: color .2s ease; position: relative; }
@@ -860,7 +858,7 @@ section { position: relative; }
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#main" class="brand" aria-label="BillVexa home">
-      <span class="brand-mark" aria-hidden="true">BV</span>
+      <img class="brand-mark" src="logo.png" alt="" width="44" height="34" aria-hidden="true" />
       BillVexa
     </a>
 
@@ -1562,7 +1560,7 @@ section { position: relative; }
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#main" class="brand" aria-label="BillVexa home">
-          <span class="brand-mark" aria-hidden="true">BV</span>
+          <img class="brand-mark" src="logo.png" alt="" width="44" height="34" aria-hidden="true" />
           BillVexa
         </a>
         <p>Made for Indian businesses. GST-ready billing, inventory, and business management.</p>
@@ -1603,6 +1601,8 @@ section { position: relative; }
     <div class="footer-bottom">
       <span>© 2026 BillVexa. All rights reserved.</span>
       <div class="footer-socials">
+        <a href="https://www.linkedin.com/company/billvexa-in/" class="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="BillVexa on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.facebook.com/people/Billvexain/61592477337010/" class="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="BillVexa on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.75l.41-3.2H13.5V8.56c0-.93.26-1.56 1.59-1.56h1.7V4.14c-.29-.04-1.3-.13-2.47-.13-2.45 0-4.12 1.49-4.12 4.23v2.36H7.43v3.2h2.77V22h3.3z"/></svg></a>
         <a href="mailto:sales@billvexa.in" class="icon-btn" aria-label="Email BillVexa"><span class="material-symbols-outlined" aria-hidden="true">mail</span></a>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<!-- Source for og-image.png (one folder up) (1200x630). Re-render: open in Chrome at 1200x630 and screenshot, or run Playwright: page.setViewportSize({width:1200,height:630}); page.screenshot(). -->
+<!-- Source for og-image.png (one folder up) (1200x630). Logo comes from ../logo.png (run make-icons.py first). Re-render: open in Chrome at 1200x630 and screenshot, or run Playwright: page.setViewportSize({width:1200,height:630}); page.screenshot(). -->
 <!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -8,7 +8,7 @@ body{width:1200px;height:630px;font-family:Poppins,sans-serif;color:#0F1B2D;over
 .wrap{display:flex;height:100%;padding:64px 72px;gap:48px;align-items:center}
 .left{flex:1.15}
 .brand{display:flex;align-items:center;gap:16px;margin-bottom:38px}
-.mark{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#1976D2,#00C853);color:#fff;font-weight:800;font-size:27px;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(25,118,210,.55)}
+.mark{height:64px;width:auto;display:block}
 .name{font-size:36px;font-weight:800;letter-spacing:-.02em}
 h1{font-size:54px;line-height:1.12;font-weight:800;letter-spacing:-.025em}
 h1 span{background:linear-gradient(90deg,#1976D2,#00C853);-webkit-background-clip:text;color:transparent}
@@ -26,7 +26,7 @@ p{margin-top:20px;font-size:23px;color:#4C5870;font-weight:500;line-height:1.45}
 .url{position:absolute;right:72px;bottom:34px;font-size:20px;font-weight:600;color:#7C879B}
 </style></head><body><div class="wrap">
 <div class="left">
- <div class="brand"><div class="mark">BV</div><div class="name">BillVexa</div></div>
+ <div class="brand"><img class="mark" src="../logo.png" alt=""><div class="name">BillVexa</div></div>
  <h1>India's <span>Next Generation</span> GST Billing &amp; Stock Software</h1>
  <p>Billing, POS and inventory for Indian retailers, wholesalers and SMEs.</p>
  <div class="chips"><div class="chip a">14-day free trial</div><div class="chip">Free setup</div><div class="chip">English · हिंदी</div></div>

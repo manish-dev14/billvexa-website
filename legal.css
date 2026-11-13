@@ -100,13 +100,7 @@ body {
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.18rem; letter-spacing: -.02em; }
-.brand-mark {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-weight: 800; font-size: .9rem;
-  box-shadow: var(--shadow-1);
-}
+.brand-mark { height: 34px; width: auto; display: block; }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
 .icon-btn {
   width: 40px; height: 40px; border-radius: 50%;
