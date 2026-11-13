@@ -369,8 +369,10 @@ section { position: relative; }
 .nav.scrolled { border-color: var(--border); box-shadow: var(--shadow-1); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
 
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.18rem; letter-spacing: -.02em; }
-.brand-mark { height: 34px; width: auto; display: block; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.65rem; letter-spacing: -.02em; }
+.brand-mark { height: 40px; width: auto; display: block; }
+.brand-accent { background: linear-gradient(100deg, var(--primary), var(--secondary-700)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (max-width: 620px) { .brand { font-size: 1.35rem; gap: 8px; } .brand-mark { height: 34px; } }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a { font-size: .93rem; font-weight: 500; color: var(--ink-soft); transition: color .2s ease; position: relative; }
@@ -859,7 +861,7 @@ section { position: relative; }
   <div class="container nav-inner">
     <a href="#main" class="brand" aria-label="BillVexa home">
       <img class="brand-mark" src="logo.png" alt="" width="44" height="34" aria-hidden="true" />
-      BillVexa
+      <span class="brand-name">Bill<span class="brand-accent">Vexa</span></span>
     </a>
 
     <nav class="nav-links" aria-label="Primary">
@@ -1561,7 +1563,7 @@ section { position: relative; }
       <div class="footer-brand">
         <a href="#main" class="brand" aria-label="BillVexa home">
           <img class="brand-mark" src="logo.png" alt="" width="44" height="34" aria-hidden="true" />
-          BillVexa
+          <span class="brand-name">Bill<span class="brand-accent">Vexa</span></span>
         </a>
         <p>Made for Indian businesses. GST-ready billing, inventory, and business management.</p>
       </div>
