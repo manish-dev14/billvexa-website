@@ -4,9 +4,9 @@
 Source: apps/billvexa-ui/public/assets/images/billvexa-half-logo-t.png (the same mark the
 app and the transactional emails use). Run from anywhere:
 
-    python3 marketing/coming-soon/brand/make-icons.py
+    python3 marketing/website/brand/make-icons.py
 
-Writes (into marketing/coming-soon/):
+Writes (into marketing/website/):
     logo.png              trimmed mark, transparent, 136px tall (4x the 34px nav/footer mark)
     favicon.svg           the mark embedded as a data URI (crisp at any size in modern browsers)
     favicon.ico           16 / 32 / 48 px, transparent

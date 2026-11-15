@@ -56,12 +56,36 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Growth Plan — monthly",
-      "price": "1499",
+      "name": "Starter Plan — monthly",
+      "price": "449",
       "priceCurrency": "INR",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": "1499",
+        "price": "449",
+        "priceCurrency": "INR",
+        "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Starter Plan — yearly",
+      "price": "4499",
+      "priceCurrency": "INR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "4499",
+        "priceCurrency": "INR",
+        "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "ANN" }
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Growth Plan — monthly",
+      "price": "649",
+      "priceCurrency": "INR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "649",
         "priceCurrency": "INR",
         "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
       }
@@ -69,11 +93,11 @@
     {
       "@type": "Offer",
       "name": "Growth Plan — yearly",
-      "price": "12000",
+      "price": "6499",
       "priceCurrency": "INR",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": "12000",
+        "price": "6499",
         "priceCurrency": "INR",
         "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "ANN" }
       }
@@ -671,38 +695,63 @@ section { position: relative; }
 .step-card p { margin-top: 6px; font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
 
 .pricing { padding-block: clamp(72px, 10vw, 120px); background: var(--bg-subtle); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.price-card {
-  position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
-  max-width: 980px; margin-inline: auto;
-  border-radius: var(--radius-xl); padding: clamp(26px, 4vw, 44px);
-  background: linear-gradient(135deg, var(--primary-700), var(--primary) 55%, var(--secondary-700));
-  color: #fff; box-shadow: var(--shadow-3);
+.bill-toggle {
+  display: flex; width: max-content; max-width: 100%; margin: 0 auto 34px; padding: 5px; gap: 4px;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 999px; box-shadow: var(--shadow-1);
 }
-.price-main { flex: 1 1 420px; min-width: 0; }
-.price-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.price-plan { font-weight: 700; font-size: 1rem; color: var(--accent); }
-.price-offer { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; background: var(--accent); color: #0F1B2D; }
-.price-amount { margin-top: 12px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.price-now { font-size: clamp(2.4rem, 2rem + 2vw, 3.4rem); font-weight: 800; letter-spacing: -.02em; line-height: 1; }
-.price-was { font-size: 1.15rem; text-decoration: line-through; opacity: .7; }
-.price-per { font-size: 1.05rem; opacity: .9; }
-.price-yearly { margin-top: 8px; font-size: .98rem; opacity: .9; }
-.price-yearly b { font-weight: 700; color: var(--accent); }
-.price-points { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
-.price-points li { display: flex; align-items: center; gap: 6px; font-size: .92rem; font-weight: 500; }
-.price-points .material-symbols-outlined { color: var(--accent); font-size: 1.1rem; }
-.price-note { margin-top: 16px; font-size: .84rem; opacity: .85; }
-.price-cta {
-  position: relative; overflow: hidden; flex-shrink: 0;
+.bill-toggle button {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #0F1B2D; font-weight: 700; font-size: 1rem;
-  padding: 15px 26px; border-radius: var(--radius-sm);
-  transition: transform .2s ease, box-shadow .2s ease;
+  font-family: var(--font); font-weight: 600; font-size: .92rem;
+  padding: 9px 20px; border: 0; border-radius: 999px; cursor: pointer;
+  background: none; color: var(--ink-soft);
+  transition: background .2s ease, color .2s ease;
 }
-.price-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(255,179,0,.7); }
+.bill-toggle button[aria-pressed="true"] { background: var(--primary-700); color: #fff; }
+.bill-save { font-size: .68rem; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--accent); color: #0F1B2D; white-space: nowrap; }
+
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 860px; margin-inline: auto; align-items: stretch; }
+.plans[data-billing="monthly"] .bill-yearly,
+.plans[data-billing="yearly"] .bill-monthly { display: none; }
+.plan {
+  position: relative; display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 34px); box-shadow: var(--shadow-1);
+}
+.plan-featured { border: 2px solid var(--primary); box-shadow: var(--glow-primary); }
+.plan-badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap;
+  padding: 5px 14px; border-radius: 999px; background: var(--accent); color: #0F1B2D;
+}
+.plan-name { font-size: 1.2rem; font-weight: 700; color: var(--info-ink); }
+.plan-for { margin-top: 4px; font-size: .9rem; color: var(--ink-soft); }
+.plan-price { margin-top: 18px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.price-now { font-size: clamp(2.2rem, 1.9rem + 1.6vw, 3rem); font-weight: 800; letter-spacing: -.02em; line-height: 1; font-variant-numeric: tabular-nums; }
+.price-per { font-size: 1rem; color: var(--ink-soft); }
+.plan-sub { margin-top: 8px; min-height: 1.5em; font-size: .86rem; color: var(--ink-soft); }
+.plan-sub b { font-weight: 700; color: var(--success-ink); }
+.plan-cta { margin-top: 20px; width: 100%; }
+.plan-list-head { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-faint); }
+.plan-list { margin-top: 12px; display: grid; gap: 10px; }
+.plan-list li { display: flex; align-items: flex-start; gap: 8px; font-size: .92rem; line-height: 1.45; }
+.plan-list .material-symbols-outlined { color: var(--success-ink); font-size: 1.15rem; flex-shrink: 0; margin-top: 1px; }
+.soon-tag { display: inline-block; margin-left: 6px; font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; background: var(--bg-subtle); border: 1px solid var(--border); color: var(--ink-soft); vertical-align: middle; white-space: nowrap; }
+.price-note { max-width: 860px; margin: 20px auto 0; text-align: center; font-size: .88rem; color: var(--ink-soft); }
+
+.compare { max-width: 860px; margin: 22px auto 0; background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md); overflow: hidden; }
+.compare summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; font-weight: 700; cursor: pointer; list-style: none; }
+.compare summary::-webkit-details-marker { display: none; }
+.compare summary .material-symbols-outlined { color: var(--primary); transition: transform .3s ease; }
+.compare[open] summary .material-symbols-outlined { transform: rotate(180deg); }
+.compare-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.compare-table th, .compare-table td { padding: 12px 20px; border-top: 1px solid var(--border); text-align: center; vertical-align: middle; }
+.compare-table th[scope="row"], .compare-table thead th:first-child { text-align: left; font-weight: 500; }
+.compare-table thead th { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); background: var(--bg-subtle); }
+.compare-table td { width: 22%; font-weight: 600; font-variant-numeric: tabular-nums; }
+.compare-table .material-symbols-outlined { color: var(--success-ink); font-size: 1.2rem; vertical-align: middle; }
+.cmp-no { color: var(--ink-faint); }
 .soon-row {
-  max-width: 980px; margin: 22px auto 0; padding: 16px 20px;
+  max-width: 860px; margin: 22px auto 0; padding: 16px 20px;
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
   background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius-md);
   font-size: .86rem;
@@ -834,7 +883,9 @@ section { position: relative; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { width: 100%; }
   .shop-grid, .steps-grid { grid-template-columns: 1fr; }
-  .price-cta { width: 100%; justify-content: center; }
+  .plans { grid-template-columns: 1fr; gap: 30px; }
+  .plan-featured { order: -1; }
+  .compare-table th, .compare-table td { padding: 10px 12px; font-size: .84rem; }
   /* the sticky bar below carries the Free Demo button on phones */
   .nav-cta { display: none; }
   .mobile-cta {
@@ -1367,34 +1418,88 @@ section { position: relative; }
   <section class="pricing" id="pricing" aria-label="Pricing">
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">sell</span>Everything In One Plan</span>
-        <h2>One plan. Everything included.</h2>
+        <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">sell</span>Simple Pricing</span>
+        <h2>Pick the plan that fits your shop</h2>
         <p>From making the bill to paying staff salaries — every job in the shop, one software.</p>
       </div>
 
-      <div class="price-card reveal">
-        <div class="price-main">
-          <div class="price-top">
-            <span class="price-plan">Growth Plan</span>
-            <span class="price-offer">First 10 shops · 40% off</span>
-          </div>
-          <div class="price-amount">
-            <span class="price-now" translate="no">₹1,499</span>
-            <span class="price-was" translate="no">₹2,499</span>
-            <span class="price-per">/ month</span>
-          </div>
-          <p class="price-yearly">or <b translate="no">₹12,000</b> / year</p>
-          <ul class="price-points">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited products</span></li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited inventory</span></li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited bills / invoices</span></li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Data kept safe for 3 years</span></li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Staff payroll</span></li>
-          </ul>
-          <p class="price-note">14-day free trial · No card needed · Free setup</p>
-        </div>
-        <a href="#demo" class="price-cta" data-ripple>Book a Free Demo<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      <div class="bill-toggle reveal" role="group" aria-label="Billing period">
+        <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+        <button type="button" data-billing="yearly" aria-pressed="false">Yearly<span class="bill-save">Save 16%</span></button>
       </div>
+
+      <div class="plans reveal" id="plans" data-billing="monthly">
+        <article class="plan">
+          <h3 class="plan-name">Starter</h3>
+          <p class="plan-for">For an owner-run shop with one counter</p>
+          <div class="plan-price bill-monthly"><span class="price-now" translate="no">₹449</span><span class="price-per">/ month</span></div>
+          <div class="plan-price bill-yearly"><span class="price-now" translate="no">₹4,499</span><span class="price-per">/ year</span></div>
+          <p class="plan-sub bill-monthly">Billed every month</p>
+          <p class="plan-sub bill-yearly"><b>Save ₹889 a year</b></p>
+          <a href="#demo" class="btn btn-ghost plan-cta" data-ripple>Book a Free Demo<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <p class="plan-list-head">What you get</p>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited GST bills and invoices</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Unlimited products and stock</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Purchases and suppliers</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Customer management</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>GST reports (GSTR-1) and sales reports</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Serial / IMEI tracking</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>2 staff logins</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Data kept safe for 3 years</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>WhatsApp and email support</span></li>
+          </ul>
+        </article>
+        <article class="plan plan-featured">
+          <span class="plan-badge">Most Popular</span>
+          <h3 class="plan-name">Growth</h3>
+          <p class="plan-for">For shops with staff and bigger stock</p>
+          <div class="plan-price bill-monthly"><span class="price-now" translate="no">₹649</span><span class="price-per">/ month</span></div>
+          <div class="plan-price bill-yearly"><span class="price-now" translate="no">₹6,499</span><span class="price-per">/ year</span></div>
+          <p class="plan-sub bill-monthly">Billed every month</p>
+          <p class="plan-sub bill-yearly"><b>Save ₹1,289 a year</b></p>
+          <a href="#demo" class="btn btn-primary plan-cta" data-ripple>Book a Free Demo<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <p class="plan-list-head">Everything in Starter, plus</p>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>10 staff logins</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Batch and expiry tracking</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Staff payroll</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Customer loyalty points</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Advanced reports — profit and stock value</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Invoice emailed to the customer</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Monthly sales report by email <span class="soon-tag">Soon</span></span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span>Priority phone support</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="price-note reveal">14-day free trial · No card needed · Free setup</p>
+
+      <details class="compare reveal">
+        <summary><span>Compare all features</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
+        <table class="compare-table">
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Growth</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">GST bills and invoices</th><td>Unlimited</td><td>Unlimited</td></tr>
+            <tr><th scope="row">Products and stock</th><td>Unlimited</td><td>Unlimited</td></tr>
+            <tr><th scope="row">Purchases and suppliers</th><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Customer management</th><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">GST reports (GSTR-1) and sales reports</th><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Serial / IMEI tracking</th><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Data kept safe for 3 years</th><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Staff logins</th><td><span translate="no">2</span></td><td><span translate="no">10</span></td></tr>
+            <tr><th scope="row">Batch and expiry tracking</th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Staff payroll</th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Customer loyalty points</th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Advanced reports — profit and stock value</th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Invoice emailed to the customer</th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Monthly sales report by email <span class="soon-tag">Soon</span></th><td><span class="cmp-no" role="img" aria-label="Not included">&mdash;</span></td><td><span class="material-symbols-outlined" role="img" aria-label="Included">check</span></td></tr>
+            <tr><th scope="row">Support</th><td>WhatsApp and email</td><td>Priority phone</td></tr>
+          </tbody>
+        </table>
+      </details>
 
       <div class="soon-row reveal">
         <strong>Coming soon:</strong>
@@ -1432,15 +1537,15 @@ section { position: relative; }
         </details>
         <details class="faq-item">
           <summary><span>Can I manage staff salaries too?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Yes. Salary, advances, payments and the monthly payroll are built in, with reports.</div>
+          <div class="faq-answer">Yes, on the Growth plan. Salary, advances, payments and the monthly payroll are built in, with reports.</div>
         </details>
         <details class="faq-item">
           <summary><span>Can my staff make bills?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login.</div>
+          <div class="faq-answer">Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login. Starter includes 2 staff logins and Growth includes 10.</div>
         </details>
         <details class="faq-item">
           <summary><span>What happens after the free trial?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
-          <div class="faq-answer">If you like it, you continue on the Growth plan. We don't take card details for the trial, so nothing is charged automatically.</div>
+          <div class="faq-answer">If you like it, you pick Starter or Growth and continue. We don't take card details for the trial, so nothing is charged automatically.</div>
         </details>
         <details class="faq-item">
           <summary><span>Is internet required?</span><span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary>
@@ -1638,6 +1743,20 @@ section { position: relative; }
     root.setAttribute('data-theme', next);
     localStorage.setItem('billvexa-theme', next);
   });
+
+  /* ---------- Pricing: monthly / yearly switch ----------
+     Both prices are in the markup; data-billing on #plans picks which shows. */
+  (function () {
+    var plans = document.getElementById('plans');
+    var buttons = document.querySelectorAll('.bill-toggle button');
+    if (!plans || !buttons.length) return;
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        plans.setAttribute('data-billing', btn.getAttribute('data-billing'));
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      });
+    });
+  })();
 
   /* ---------- Language (English / हिंदी) ----------
      The page is written in English. Hindi is applied on top of it from the
@@ -1845,17 +1964,50 @@ section { position: relative; }
     "Our team creates your shop's account and switches on the features you need.": "हमारी टीम आपकी दुकान का अकाउंट बनाकर ज़रूरी फ़ीचर चालू कर देगी।",
     "Run it free for 14 days": "14 दिन फ्री चलाएं",
     "Continue if you like it. No card needed.": "पसंद आए तो जारी रखें, कोई कार्ड नहीं चाहिए।",
-    "Everything In One Plan": "सब कुछ एक ही प्लान में",
-    "One plan. Everything included.": "एक प्लान। सब कुछ शामिल।",
+    "Simple Pricing": "सीधी-सादी कीमत",
+    "Pick the plan that fits your shop": "अपनी दुकान के हिसाब से प्लान चुनें",
     "From making the bill to paying staff salaries — every job in the shop, one software.": "बिल बनाने से लेकर स्टाफ़ की सैलरी तक — दुकान का हर काम, एक सॉफ़्टवेयर में।",
-    "Growth Plan": "Growth प्लान",
-    "First 10 shops · 40% off": "पहले 10 दुकानों के लिए · 40% OFF",
+    "Billing period": "बिलिंग अवधि",
+    "Monthly": "मासिक",
+    "Yearly": "सालाना",
+    "Save 16%": "16% बचत",
+    "Most Popular": "सबसे लोकप्रिय",
+    "For an owner-run shop with one counter": "एक काउंटर वाली, मालिक द्वारा चलाई जाने वाली दुकान के लिए",
+    "For shops with staff and bigger stock": "स्टाफ़ और ज़्यादा स्टॉक वाली दुकानों के लिए",
     "/ month": "/ महीना",
-    "or": "या",
     "/ year": "/ साल",
-    "Unlimited products": "अनलिमिटेड प्रोडक्ट",
-    "Unlimited inventory": "अनलिमिटेड इन्वेंटरी",
-    "Unlimited bills / invoices": "अनलिमिटेड बिल / इनवॉइस",
+    "Billed every month": "हर महीने बिल",
+    "Save ₹889 a year": "साल में ₹889 की बचत",
+    "Save ₹1,289 a year": "साल में ₹1,289 की बचत",
+    "What you get": "आपको क्या मिलता है",
+    "Everything in Starter, plus": "Starter का सब कुछ, और साथ में",
+    "Unlimited GST bills and invoices": "अनलिमिटेड GST बिल और इनवॉइस",
+    "Unlimited products and stock": "अनलिमिटेड प्रोडक्ट और स्टॉक",
+    "Purchases and suppliers": "खरीद और सप्लायर",
+    "Customer management": "ग्राहक मैनेजमेंट",
+    "GST reports (GSTR-1) and sales reports": "GST रिपोर्ट (GSTR-1) और बिक्री रिपोर्ट",
+    "Serial / IMEI tracking": "सीरियल / IMEI ट्रैकिंग",
+    "2 staff logins": "2 स्टाफ़ लॉगिन",
+    "10 staff logins": "10 स्टाफ़ लॉगिन",
+    "WhatsApp and email support": "WhatsApp और ईमेल सपोर्ट",
+    "Batch and expiry tracking": "बैच और एक्सपायरी ट्रैकिंग",
+    "Customer loyalty points": "ग्राहक लॉयल्टी पॉइंट",
+    "Advanced reports — profit and stock value": "एडवांस रिपोर्ट — मुनाफ़ा और स्टॉक की कीमत",
+    "Invoice emailed to the customer": "ग्राहक को ईमेल पर इनवॉइस",
+    "Monthly sales report by email": "ईमेल पर महीने की बिक्री रिपोर्ट",
+    "Soon": "जल्द",
+    "Priority phone support": "प्राथमिकता वाला फ़ोन सपोर्ट",
+    "Compare all features": "सभी फ़ीचर की तुलना करें",
+    "Feature": "फ़ीचर",
+    "Unlimited": "अनलिमिटेड",
+    "GST bills and invoices": "GST बिल और इनवॉइस",
+    "Products and stock": "प्रोडक्ट और स्टॉक",
+    "Staff logins": "स्टाफ़ लॉगिन",
+    "Support": "सपोर्ट",
+    "WhatsApp and email": "WhatsApp और ईमेल",
+    "Priority phone": "प्राथमिकता वाला फ़ोन",
+    "Included": "शामिल",
+    "Not included": "शामिल नहीं",
     "Data kept safe for 3 years": "3 साल तक डेटा सुरक्षित",
     "Staff payroll": "स्टाफ़ पेरोल",
     "14-day free trial · No card needed · Free setup": "14 दिन फ्री ट्रायल · कोई कार्ड नहीं · सेटअप फ्री",
@@ -1878,11 +2030,11 @@ section { position: relative; }
     "How long is my data kept?": "मेरा डेटा कितने समय तक रहेगा?",
     "Your data is kept safe for 3 years.": "आपका डेटा 3 साल तक सुरक्षित रहता है।",
     "Can I manage staff salaries too?": "क्या स्टाफ़ की सैलरी भी मैनेज हो सकती है?",
-    "Yes. Salary, advances, payments and the monthly payroll are built in, with reports.": "हाँ। सैलरी, एडवांस, पेमेंट और महीने का पेरोल इसी में है, रिपोर्ट के साथ।",
+    "Yes, on the Growth plan. Salary, advances, payments and the monthly payroll are built in, with reports.": "हाँ, Growth प्लान में। सैलरी, एडवांस, पेमेंट और महीने का पेरोल इसी में है, रिपोर्ट के साथ।",
     "Can my staff make bills?": "क्या स्टाफ़ बिल बना सकता है?",
-    "Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login.": "हाँ। हर व्यक्ति को रोल दें — मालिक, मैनेजर, कैशियर या अकाउंटेंट — अलग-अलग परमिशन और PIN लॉगिन के साथ।",
+    "Yes. Give each person a role — owner, manager, cashier or accountant — with its own permissions and a PIN login. Starter includes 2 staff logins and Growth includes 10.": "हाँ। हर व्यक्ति को रोल दें — मालिक, मैनेजर, कैशियर या अकाउंटेंट — अलग-अलग परमिशन और PIN लॉगिन के साथ। Starter में 2 स्टाफ़ लॉगिन और Growth में 10 मिलते हैं।",
     "What happens after the free trial?": "फ्री ट्रायल के बाद क्या होगा?",
-    "If you like it, you continue on the Growth plan. We don't take card details for the trial, so nothing is charged automatically.": "पसंद आए तो Growth प्लान पर जारी रखें। ट्रायल के लिए हम कार्ड की जानकारी नहीं लेते, इसलिए अपने आप कोई पैसा नहीं कटता।",
+    "If you like it, you pick Starter or Growth and continue. We don't take card details for the trial, so nothing is charged automatically.": "पसंद आए तो Starter या Growth चुनकर जारी रखें। ट्रायल के लिए हम कार्ड की जानकारी नहीं लेते, इसलिए अपने आप कोई पैसा नहीं कटता।",
     "Is internet required?": "इंटरनेट ज़रूरी है?",
     "Yes. BillVexa runs in the browser, so you need an internet connection to use it.": "हाँ। BillVexa ब्राउज़र में चलता है, इसलिए इसे चलाने के लिए इंटरनेट चाहिए।",
     "See BillVexa in action": "BillVexa को चलता हुआ देखें",
@@ -2202,7 +2354,7 @@ section { position: relative; }
       city: form.elements.city.value.trim(),
       businessType: form.elements.businessType.value,
       acceptedTerms: true,
-      source: 'coming_soon',
+      source: 'website',
       referrer: document.referrer.slice(0, 500),
       utmSource: (params.get('utm_source') || '').slice(0, 100),
       utmMedium: (params.get('utm_medium') || '').slice(0, 100),
